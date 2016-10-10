@@ -89,7 +89,7 @@
 
 ## Output
 
-
+![](https://ivanceras.github.io/svgbob/screenshot/out.svg)
 ![](https://raw.githubusercontent.com/ivanceras/svgbob/master/screenshot/out.svg.png)
 
 ## [Demo](https://ivanceras.github.io/svgbob/build/)
