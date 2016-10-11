@@ -8,6 +8,7 @@ import Html.App as App
 import Json.Decode exposing (string)
 import Regex
 import Diagram
+import Grid
 
 
 {-- code which detects lines and connections
@@ -53,7 +54,7 @@ view model =
                    ]
             ]
             [
-            Diagram.toSvg model.input
+            Debug.log "svg " <| Grid.toSvg model.input
             ]
         ]
 
