@@ -1,4 +1,11 @@
 module Diagram exposing (toSvg)
+{-|
+Diagram is the main module
+Contains method to convert ascii diagram into and svg
+ 
+@docs toSvg
+
+-}
 import String
 import Svg exposing (Svg,svg,path,line,marker,defs,pattern,rect)
 import Svg.Attributes exposing (
@@ -33,8 +40,8 @@ type alias Model =
     }
 
 {-| Converts the ascii text into an SVG diagram
- ________
- \________\ -----> SVG
+ 
+ Ascii  -----> SVG
   
 -}
 toSvg: String -> Svg a
