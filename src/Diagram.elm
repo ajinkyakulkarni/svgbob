@@ -1,4 +1,4 @@
-module Diagram exposing (..)
+module Diagram exposing (toSvg)
 import String
 import Svg exposing (Svg,svg,path,line,marker,defs,pattern,rect)
 import Svg.Attributes exposing (
@@ -32,6 +32,15 @@ type alias Model =
     ,lines: Array (Array Char)
     }
 
+{-| Converts the ascii text into an SVG diagram
+ ________
+ \________\ -----> SVG
+  
+-}
+toSvg: String -> Svg a
+toSvg input =
+    init input
+        |> getSvg
 
 init: String -> Model
 init str =
@@ -328,6 +337,16 @@ componentPathList x y =
     )
     ,
     {--
+           \
+           -'
+    --}
+    (Junction Mid [Left, TopLeft] Smooth
+    ,[Arc (Point qx qy, Point sx my, arcRadius, True)
+     ,Line (Point qx qy, Point sx sy)
+     ]
+    )
+    ,
+    {--
            -.
            /
     --}
@@ -337,6 +356,16 @@ componentPathList x y =
      ]
     )
 
+    ,
+    {--
+            .-
+             \ 
+    --}
+    (Junction Mid [Right, BottomRight] Smooth
+    ,[Arc (Point q3x q3y, Point ex my, arcRadius, True)
+     ,Line (Point q3x q3y, Point ex ey)
+     ]
+    )
     ,
     {--
          \  
@@ -602,7 +631,7 @@ componentPathList x y =
     ,
     {--
        .  
-      (
+        )
        '
 
     --}
@@ -1201,12 +1230,22 @@ componentMatchList x y model =
             ,
             {--
                  / 
-                '- 
+                '-
             --}
             (isChar char isRound
              && isNeighbor right isHorizontal
              && isNeighbor topRight isSlantRight
             ,Junction Mid [Right, TopRight] Smooth
+            )
+            ,
+            {--
+                 \ 
+                 -'
+            --}
+            (isChar char isRound
+             && isNeighbor left isHorizontal
+             && isNeighbor topLeft isSlantLeft
+            ,Junction Mid [Left, TopLeft] Smooth
             )
             ,
             {--
@@ -1217,6 +1256,16 @@ componentMatchList x y model =
              && isNeighbor left isHorizontal
              && isNeighbor bottomLeft isSlantRight
             ,Junction Mid [Left, BottomLeft] Smooth
+            )
+            ,
+            {--
+                .- 
+                 \   
+            --}
+            (isChar char isRound
+             && isNeighbor right isHorizontal
+             && isNeighbor bottomRight isSlantLeft
+            ,Junction Mid [Right, BottomRight] Smooth
             )
             ,
             {--
@@ -2208,8 +2257,7 @@ drawArc start end radius sweep =
 
         paths = 
             ["M", toString sx, toString sy
-            ,"A", toString rx, toString ry, "0" ,"0", sweepFlag
-            ,toString ex, toString ey
+            ,"A", toString rx, toString ry, "0" ,"0", sweepFlag ,toString ex, toString ey
             ] |> String.join " "
     in
        path [d paths, stroke <| colorText color, strokeWidth <| toString lineWidth, fill "none"] []

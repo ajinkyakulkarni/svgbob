@@ -15,7 +15,7 @@ also algorithmn to connect these lines
 --}
 
 type alias Model =
- {grid: Diagram.Model
+ {input: String
  }
 
 type Msg = Input String | Convert
@@ -23,7 +23,7 @@ type Msg = Input String | Convert
 
 init: (Model, Cmd Msg)
 init  =
-    ({grid = Diagram.init arg
+    ({input = ""
      }
     ,Cmd.batch[
         setAsciiText arg
@@ -53,10 +53,7 @@ view model =
                    ]
             ]
             [
-            let _ = Debug.log "start svg" ""
-                svg =Diagram.getSvg model.grid
-                _ = Debug.log "end svg" ""
-            in svg
+            Diagram.toSvg model.input
             ]
         ]
 
@@ -66,7 +63,7 @@ update msg model =
         Convert ->
             (model, getAsciiText () )
         Input asciiText ->
-            ({model | grid = Diagram.init asciiText}
+            ({model | input = asciiText}
             ,Cmd.none
             )
 

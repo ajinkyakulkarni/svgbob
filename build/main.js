@@ -8546,7 +8546,7 @@ var _elm_lang$svg$Svg_Attributes$accumulate = _elm_lang$virtual_dom$VirtualDom$a
 var _elm_lang$svg$Svg_Attributes$accelerate = _elm_lang$virtual_dom$VirtualDom$attribute('accelerate');
 var _elm_lang$svg$Svg_Attributes$accentHeight = _elm_lang$virtual_dom$VirtualDom$attribute('accent-height');
 
-var _user$project$Diagram$arrowMarker = A2(
+var _ivanceras$svgbob$Diagram$arrowMarker = A2(
 	_elm_lang$svg$Svg$marker,
 	_elm_lang$core$Native_List.fromArray(
 		[
@@ -8570,7 +8570,7 @@ var _user$project$Diagram$arrowMarker = A2(
 			_elm_lang$core$Native_List.fromArray(
 				[]))
 		]));
-var _user$project$Diagram$colorText = function (color) {
+var _ivanceras$svgbob$Diagram$colorText = function (color) {
 	var _p0 = _elm_lang$core$Color$toRgb(color);
 	var red = _p0.red;
 	var green = _p0.green;
@@ -8596,7 +8596,7 @@ var _user$project$Diagram$colorText = function (color) {
 							_elm_lang$core$Basics$toString(blue),
 							')'))))));
 };
-var _user$project$Diagram$startEnd = function (path) {
+var _ivanceras$svgbob$Diagram$startEnd = function (path) {
 	var _p1 = path;
 	switch (_p1.ctor) {
 		case 'Line':
@@ -8612,7 +8612,7 @@ var _user$project$Diagram$startEnd = function (path) {
 			return {ctor: '_Tuple2', _0: _p2, _1: _p2};
 	}
 };
-var _user$project$Diagram$mergeText = F2(
+var _ivanceras$svgbob$Diagram$mergeText = F2(
 	function (text, $char) {
 		var _p3 = $char;
 		if (_p3.ctor === 'Just') {
@@ -8624,7 +8624,7 @@ var _user$project$Diagram$mergeText = F2(
 			return text;
 		}
 	});
-var _user$project$Diagram$drawText = F2(
+var _ivanceras$svgbob$Diagram$drawText = F2(
 	function (point, chars) {
 		var sy = point.y;
 		var sx = point.x;
@@ -8642,12 +8642,12 @@ var _user$project$Diagram$drawText = F2(
 					_elm_lang$svg$Svg$text(chars)
 				]));
 	});
-var _user$project$Diagram$isNotSpace = function ($char) {
+var _ivanceras$svgbob$Diagram$isNotSpace = function ($char) {
 	return !_elm_lang$core$Native_Utils.eq(
 		$char,
 		_elm_lang$core$Native_Utils.chr(' '));
 };
-var _user$project$Diagram$isNeighbor = F2(
+var _ivanceras$svgbob$Diagram$isNeighbor = F2(
 	function (neighbor, check) {
 		var _p4 = neighbor;
 		if (_p4.ctor === 'Just') {
@@ -8656,7 +8656,7 @@ var _user$project$Diagram$isNeighbor = F2(
 			return false;
 		}
 	});
-var _user$project$Diagram$isChar = F2(
+var _ivanceras$svgbob$Diagram$isChar = F2(
 	function ($char, check) {
 		var _p5 = $char;
 		if (_p5.ctor === 'Just') {
@@ -8665,10 +8665,10 @@ var _user$project$Diagram$isChar = F2(
 			return false;
 		}
 	});
-var _user$project$Diagram$isAlphaNumeric = function ($char) {
+var _ivanceras$svgbob$Diagram$isAlphaNumeric = function ($char) {
 	return _elm_lang$core$Char$isDigit($char) || (_elm_lang$core$Char$isUpper($char) || _elm_lang$core$Char$isLower($char));
 };
-var _user$project$Diagram$get = F3(
+var _ivanceras$svgbob$Diagram$get = F3(
 	function (x, y, model) {
 		var line = A2(_elm_lang$core$Array$get, y, model.lines);
 		var $char = function () {
@@ -8682,214 +8682,214 @@ var _user$project$Diagram$get = F3(
 		var row = y;
 		return $char;
 	});
-var _user$project$Diagram$leftOf = F3(
+var _ivanceras$svgbob$Diagram$leftOf = F3(
 	function (x, y, model) {
-		return A3(_user$project$Diagram$get, x - 1, y, model);
+		return A3(_ivanceras$svgbob$Diagram$get, x - 1, y, model);
 	});
-var _user$project$Diagram$rightOf = F3(
+var _ivanceras$svgbob$Diagram$rightOf = F3(
 	function (x, y, model) {
-		return A3(_user$project$Diagram$get, x + 1, y, model);
+		return A3(_ivanceras$svgbob$Diagram$get, x + 1, y, model);
 	});
-var _user$project$Diagram$topOf = F3(
+var _ivanceras$svgbob$Diagram$topOf = F3(
 	function (x, y, model) {
-		return A3(_user$project$Diagram$get, x, y - 1, model);
+		return A3(_ivanceras$svgbob$Diagram$get, x, y - 1, model);
 	});
-var _user$project$Diagram$bottomOf = F3(
+var _ivanceras$svgbob$Diagram$bottomOf = F3(
 	function (x, y, model) {
-		return A3(_user$project$Diagram$get, x, y + 1, model);
+		return A3(_ivanceras$svgbob$Diagram$get, x, y + 1, model);
 	});
-var _user$project$Diagram$topLeftOf = F3(
+var _ivanceras$svgbob$Diagram$topLeftOf = F3(
 	function (x, y, model) {
-		return A3(_user$project$Diagram$get, x - 1, y - 1, model);
+		return A3(_ivanceras$svgbob$Diagram$get, x - 1, y - 1, model);
 	});
-var _user$project$Diagram$topRightOf = F3(
+var _ivanceras$svgbob$Diagram$topRightOf = F3(
 	function (x, y, model) {
-		return A3(_user$project$Diagram$get, x + 1, y - 1, model);
+		return A3(_ivanceras$svgbob$Diagram$get, x + 1, y - 1, model);
 	});
-var _user$project$Diagram$bottomLeftOf = F3(
+var _ivanceras$svgbob$Diagram$bottomLeftOf = F3(
 	function (x, y, model) {
-		return A3(_user$project$Diagram$get, x - 1, y + 1, model);
+		return A3(_ivanceras$svgbob$Diagram$get, x - 1, y + 1, model);
 	});
-var _user$project$Diagram$bottomRightOf = F3(
+var _ivanceras$svgbob$Diagram$bottomRightOf = F3(
 	function (x, y, model) {
-		return A3(_user$project$Diagram$get, x + 1, y + 1, model);
+		return A3(_ivanceras$svgbob$Diagram$get, x + 1, y + 1, model);
 	});
-var _user$project$Diagram$isPartOfText = F3(
+var _ivanceras$svgbob$Diagram$isPartOfText = F3(
 	function (x, y, model) {
-		var left = A3(_user$project$Diagram$get, x - 1, y, model);
-		var right = A3(_user$project$Diagram$get, x + 1, y, model);
-		var $char = A3(_user$project$Diagram$get, x, y, model);
+		var left = A3(_ivanceras$svgbob$Diagram$get, x - 1, y, model);
+		var right = A3(_ivanceras$svgbob$Diagram$get, x + 1, y, model);
+		var $char = A3(_ivanceras$svgbob$Diagram$get, x, y, model);
 		var wordSpace = A2(
-			_user$project$Diagram$isChar,
+			_ivanceras$svgbob$Diagram$isChar,
 			$char,
 			function (a) {
 				return _elm_lang$core$Native_Utils.eq(
 					a,
 					_elm_lang$core$Native_Utils.chr(' '));
-			}) && (A2(_user$project$Diagram$isChar, right, _user$project$Diagram$isAlphaNumeric) && A2(_user$project$Diagram$isChar, left, _user$project$Diagram$isAlphaNumeric));
-		return A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isAlphaNumeric) && A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric);
+			}) && (A2(_ivanceras$svgbob$Diagram$isChar, right, _ivanceras$svgbob$Diagram$isAlphaNumeric) && A2(_ivanceras$svgbob$Diagram$isChar, left, _ivanceras$svgbob$Diagram$isAlphaNumeric));
+		return A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isAlphaNumeric) && A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric);
 	});
-var _user$project$Diagram$closeCurve = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$closeCurve = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr(')')
 	]);
-var _user$project$Diagram$isCloseCurve = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$closeCurve);
+var _ivanceras$svgbob$Diagram$isCloseCurve = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$closeCurve);
 };
-var _user$project$Diagram$openCurve = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$openCurve = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('(')
 	]);
-var _user$project$Diagram$isOpenCurve = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$openCurve);
+var _ivanceras$svgbob$Diagram$isOpenCurve = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$openCurve);
 };
-var _user$project$Diagram$slantLeft = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$slantLeft = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('\\')
 	]);
-var _user$project$Diagram$isSlantLeft = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$slantLeft);
+var _ivanceras$svgbob$Diagram$isSlantLeft = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$slantLeft);
 };
-var _user$project$Diagram$slantRight = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$slantRight = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('/')
 	]);
-var _user$project$Diagram$isSlantRight = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$slantRight);
+var _ivanceras$svgbob$Diagram$isSlantRight = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$slantRight);
 };
-var _user$project$Diagram$arrowUp = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$arrowUp = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('^'),
 		_elm_lang$core$Native_Utils.chr('î')
 	]);
-var _user$project$Diagram$isArrowUp = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$arrowUp);
+var _ivanceras$svgbob$Diagram$isArrowUp = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$arrowUp);
 };
-var _user$project$Diagram$arrowLeft = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$arrowLeft = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('<')
 	]);
-var _user$project$Diagram$isArrowLeft = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$arrowLeft);
+var _ivanceras$svgbob$Diagram$isArrowLeft = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$arrowLeft);
 };
-var _user$project$Diagram$arrowDown = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$arrowDown = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('V'),
 		_elm_lang$core$Native_Utils.chr('v')
 	]);
-var _user$project$Diagram$isArrowDown = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$arrowDown);
+var _ivanceras$svgbob$Diagram$isArrowDown = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$arrowDown);
 };
-var _user$project$Diagram$arrowRight = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$arrowRight = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('>')
 	]);
-var _user$project$Diagram$isArrowRight = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$arrowRight);
+var _ivanceras$svgbob$Diagram$isArrowRight = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$arrowRight);
 };
-var _user$project$Diagram$roundHigh = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$roundHigh = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('\'')
 	]);
-var _user$project$Diagram$isRoundHigh = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$roundHigh);
+var _ivanceras$svgbob$Diagram$isRoundHigh = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$roundHigh);
 };
-var _user$project$Diagram$roundLow = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$roundLow = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('.')
 	]);
-var _user$project$Diagram$isRoundLow = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$roundLow);
+var _ivanceras$svgbob$Diagram$isRoundLow = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$roundLow);
 };
-var _user$project$Diagram$round = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$round = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('.'),
 		_elm_lang$core$Native_Utils.chr('\'')
 	]);
-var _user$project$Diagram$isRound = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$round);
+var _ivanceras$svgbob$Diagram$isRound = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$round);
 };
-var _user$project$Diagram$asterisk = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$asterisk = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('*')
 	]);
-var _user$project$Diagram$isAsterisk = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$asterisk);
+var _ivanceras$svgbob$Diagram$isAsterisk = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$asterisk);
 };
-var _user$project$Diagram$intersection = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$intersection = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('+')
 	]);
-var _user$project$Diagram$isIntersection = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$intersection);
+var _ivanceras$svgbob$Diagram$isIntersection = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$intersection);
 };
-var _user$project$Diagram$lowHorizontal = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$lowHorizontal = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('_')
 	]);
-var _user$project$Diagram$isLowHorizontal = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$lowHorizontal);
+var _ivanceras$svgbob$Diagram$isLowHorizontal = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$lowHorizontal);
 };
-var _user$project$Diagram$horizontalDashed = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$horizontalDashed = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('=')
 	]);
-var _user$project$Diagram$isHorizontalDashed = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$horizontalDashed);
+var _ivanceras$svgbob$Diagram$isHorizontalDashed = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$horizontalDashed);
 };
-var _user$project$Diagram$horizontal = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$horizontal = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('-')
 	]);
-var _user$project$Diagram$isHorizontal = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$horizontal);
+var _ivanceras$svgbob$Diagram$isHorizontal = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$horizontal);
 };
-var _user$project$Diagram$verticalDashed = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$verticalDashed = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr(':')
 	]);
-var _user$project$Diagram$isVerticalDashed = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$verticalDashed);
+var _ivanceras$svgbob$Diagram$isVerticalDashed = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$verticalDashed);
 };
-var _user$project$Diagram$vertical = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$vertical = _elm_lang$core$Native_List.fromArray(
 	[
 		_elm_lang$core$Native_Utils.chr('|')
 	]);
-var _user$project$Diagram$isVertical = function ($char) {
-	return A2(_elm_lang$core$List$member, $char, _user$project$Diagram$vertical);
+var _ivanceras$svgbob$Diagram$isVertical = function ($char) {
+	return A2(_elm_lang$core$List$member, $char, _ivanceras$svgbob$Diagram$vertical);
 };
-var _user$project$Diagram$isLine = function ($char) {
-	return _user$project$Diagram$isVertical($char) || (_user$project$Diagram$isHorizontal($char) || _user$project$Diagram$isLowHorizontal($char));
+var _ivanceras$svgbob$Diagram$isLine = function ($char) {
+	return _ivanceras$svgbob$Diagram$isVertical($char) || (_ivanceras$svgbob$Diagram$isHorizontal($char) || _ivanceras$svgbob$Diagram$isLowHorizontal($char));
 };
-var _user$project$Diagram$usedAsArrow = F3(
+var _ivanceras$svgbob$Diagram$usedAsArrow = F3(
 	function (x, y, model) {
-		var topRight = A3(_user$project$Diagram$get, x + 1, y - 1, model);
-		var topLeft = A3(_user$project$Diagram$get, x - 1, y - 1, model);
-		var top = A3(_user$project$Diagram$get, x, y - 1, model);
-		var $char = A3(_user$project$Diagram$get, x, y, model);
-		return A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowDown) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) || (A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft) || A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight)));
+		var topRight = A3(_ivanceras$svgbob$Diagram$get, x + 1, y - 1, model);
+		var topLeft = A3(_ivanceras$svgbob$Diagram$get, x - 1, y - 1, model);
+		var top = A3(_ivanceras$svgbob$Diagram$get, x, y - 1, model);
+		var $char = A3(_ivanceras$svgbob$Diagram$get, x, y, model);
+		return A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowDown) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) || (A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft) || A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight)));
 	});
-var _user$project$Diagram$traceText = F4(
+var _ivanceras$svgbob$Diagram$traceText = F4(
 	function (x, y, model, prevChars) {
 		traceText:
 		while (true) {
-			var left = A3(_user$project$Diagram$get, x - 1, y, model);
-			var right = A3(_user$project$Diagram$get, x + 1, y, model);
-			var $char = A3(_user$project$Diagram$get, x, y, model);
+			var left = A3(_ivanceras$svgbob$Diagram$get, x - 1, y, model);
+			var right = A3(_ivanceras$svgbob$Diagram$get, x + 1, y, model);
+			var $char = A3(_ivanceras$svgbob$Diagram$get, x, y, model);
 			var wordSpace = A2(
-				_user$project$Diagram$isChar,
+				_ivanceras$svgbob$Diagram$isChar,
 				$char,
 				function (a) {
 					return _elm_lang$core$Native_Utils.eq(
 						a,
 						_elm_lang$core$Native_Utils.chr(' '));
-				}) && (A2(_user$project$Diagram$isChar, right, _user$project$Diagram$isAlphaNumeric) && A2(_user$project$Diagram$isChar, left, _user$project$Diagram$isAlphaNumeric));
-			if (A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isAlphaNumeric) && _elm_lang$core$Basics$not(
-				A3(_user$project$Diagram$usedAsArrow, x, y, model))) {
+				}) && (A2(_ivanceras$svgbob$Diagram$isChar, right, _ivanceras$svgbob$Diagram$isAlphaNumeric) && A2(_ivanceras$svgbob$Diagram$isChar, left, _ivanceras$svgbob$Diagram$isAlphaNumeric));
+			if (A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isAlphaNumeric) && _elm_lang$core$Basics$not(
+				A3(_ivanceras$svgbob$Diagram$usedAsArrow, x, y, model))) {
 				var _v5 = x + 1,
 					_v6 = y,
 					_v7 = model,
-					_v8 = A2(_user$project$Diagram$mergeText, prevChars, $char);
+					_v8 = A2(_ivanceras$svgbob$Diagram$mergeText, prevChars, $char);
 				x = _v5;
 				y = _v6;
 				model = _v7;
@@ -8900,7 +8900,7 @@ var _user$project$Diagram$traceText = F4(
 			}
 		}
 	});
-var _user$project$Diagram$getTexts = function (model) {
+var _ivanceras$svgbob$Diagram$getTexts = function (model) {
 	return A2(
 		_elm_lang$core$List$filterMap,
 		function (a) {
@@ -8917,10 +8917,10 @@ var _user$project$Diagram$getTexts = function (model) {
 									_elm_lang$core$Array$indexedMap,
 									F2(
 										function (x, $char) {
-											if (A3(_user$project$Diagram$isPartOfText, x, y, model)) {
+											if (A3(_ivanceras$svgbob$Diagram$isPartOfText, x, y, model)) {
 												return _elm_lang$core$Maybe$Nothing;
 											} else {
-												var traced = A4(_user$project$Diagram$traceText, x, y, model, '');
+												var traced = A4(_ivanceras$svgbob$Diagram$traceText, x, y, model, '');
 												return _elm_lang$core$String$isEmpty(traced) ? _elm_lang$core$Maybe$Nothing : _elm_lang$core$Maybe$Just(
 													{ctor: '_Tuple3', _0: x, _1: y, _2: traced});
 											}
@@ -8929,7 +8929,7 @@ var _user$project$Diagram$getTexts = function (model) {
 						}),
 					model.lines))));
 };
-var _user$project$Diagram$isReduceable = function (comp) {
+var _ivanceras$svgbob$Diagram$isReduceable = function (comp) {
 	var _p7 = comp;
 	if (_p7.ctor === 'Just') {
 		var _p8 = _p7._0;
@@ -8942,7 +8942,7 @@ var _user$project$Diagram$isReduceable = function (comp) {
 		return false;
 	}
 };
-var _user$project$Diagram$canConcat = F2(
+var _ivanceras$svgbob$Diagram$canConcat = F2(
 	function (path1, path2) {
 		var _p9 = path1;
 		switch (_p9.ctor) {
@@ -9005,7 +9005,7 @@ var _user$project$Diagram$canConcat = F2(
 				return false;
 		}
 	});
-var _user$project$Diagram$toPathDefs = function (paths) {
+var _ivanceras$svgbob$Diagram$toPathDefs = function (paths) {
 	var _p15 = A3(
 		_elm_lang$core$List$foldl,
 		F2(
@@ -9083,7 +9083,7 @@ var _user$project$Diagram$toPathDefs = function (paths) {
 					return _elm_lang$core$Native_List.fromArray(
 						[]);
 				}();
-				var _p23 = _user$project$Diagram$startEnd(next);
+				var _p23 = _ivanceras$svgbob$Diagram$startEnd(next);
 				var start = _p23._0;
 				var end = _p23._1;
 				var movePen = _elm_lang$core$Native_List.fromArray(
@@ -9095,7 +9095,7 @@ var _user$project$Diagram$toPathDefs = function (paths) {
 				var pathDefs = function () {
 					var _p24 = _p17._0;
 					if (_p24.ctor === 'Just') {
-						return A2(_user$project$Diagram$canConcat, _p24._0, next) ? A2(_elm_lang$core$String$join, ' ', $continue) : A2(
+						return A2(_ivanceras$svgbob$Diagram$canConcat, _p24._0, next) ? A2(_elm_lang$core$String$join, ' ', $continue) : A2(
 							_elm_lang$core$String$join,
 							' ',
 							A2(_elm_lang$core$Basics_ops['++'], movePen, $continue));
@@ -9126,7 +9126,7 @@ var _user$project$Diagram$toPathDefs = function (paths) {
 	var unmergedPaths$ = _p15._2;
 	return {ctor: '_Tuple2', _0: pathDefs$, _1: unmergedPaths$};
 };
-var _user$project$Diagram$collinear = F3(
+var _ivanceras$svgbob$Diagram$collinear = F3(
 	function (p1, p2, p3) {
 		var cy = p3.y;
 		var cx = p3.x;
@@ -9136,7 +9136,7 @@ var _user$project$Diagram$collinear = F3(
 		var ax = p1.x;
 		return _elm_lang$core$Native_Utils.eq(((ax * (by - cy)) + (bx * (cy - ay))) + (cx * (ay - by)), 0);
 	});
-var _user$project$Diagram$init = function (str) {
+var _ivanceras$svgbob$Diagram$init = function (str) {
 	var lines = _elm_lang$core$String$lines(str);
 	var max = _elm_lang$core$List$maximum(
 		A2(
@@ -9160,22 +9160,22 @@ var _user$project$Diagram$init = function (str) {
 		lines: lineChar
 	};
 };
-var _user$project$Diagram$gridOn = false;
-var _user$project$Diagram$optimizeSvg = false;
-var _user$project$Diagram$color = A3(_elm_lang$core$Color$rgb, 0, 0, 0);
-var _user$project$Diagram$textHeight = 16.0;
-var _user$project$Diagram$measureY = function (y) {
-	return _elm_lang$core$Basics$toFloat(y) * _user$project$Diagram$textHeight;
+var _ivanceras$svgbob$Diagram$gridOn = false;
+var _ivanceras$svgbob$Diagram$optimizeSvg = false;
+var _ivanceras$svgbob$Diagram$color = A3(_elm_lang$core$Color$rgb, 0, 0, 0);
+var _ivanceras$svgbob$Diagram$textHeight = 16.0;
+var _ivanceras$svgbob$Diagram$measureY = function (y) {
+	return _elm_lang$core$Basics$toFloat(y) * _ivanceras$svgbob$Diagram$textHeight;
 };
-var _user$project$Diagram$textWidth = 8.0;
-var _user$project$Diagram$arcRadius = _user$project$Diagram$textWidth / 2;
-var _user$project$Diagram$measureX = function (x) {
-	return _elm_lang$core$Basics$toFloat(x) * _user$project$Diagram$textWidth;
+var _ivanceras$svgbob$Diagram$textWidth = 8.0;
+var _ivanceras$svgbob$Diagram$arcRadius = _ivanceras$svgbob$Diagram$textWidth / 2;
+var _ivanceras$svgbob$Diagram$measureX = function (x) {
+	return _elm_lang$core$Basics$toFloat(x) * _ivanceras$svgbob$Diagram$textWidth;
 };
-var _user$project$Diagram$svgText = F3(
+var _ivanceras$svgbob$Diagram$svgText = F3(
 	function (xloc, yloc, chars) {
-		var sy = _user$project$Diagram$measureY(yloc) + ((_user$project$Diagram$textHeight * 3) / 4);
-		var sx = _user$project$Diagram$measureX(xloc) - (_user$project$Diagram$textWidth / 4);
+		var sy = _ivanceras$svgbob$Diagram$measureY(yloc) + ((_ivanceras$svgbob$Diagram$textHeight * 3) / 4);
+		var sx = _ivanceras$svgbob$Diagram$measureX(xloc) - (_ivanceras$svgbob$Diagram$textWidth / 4);
 		return A2(
 			_elm_lang$svg$Svg$text$,
 			_elm_lang$core$Native_List.fromArray(
@@ -9190,7 +9190,7 @@ var _user$project$Diagram$svgText = F3(
 					_elm_lang$svg$Svg$text(chars)
 				]));
 	});
-var _user$project$Diagram$gridFill = _elm_lang$core$Native_List.fromArray(
+var _ivanceras$svgbob$Diagram$gridFill = _elm_lang$core$Native_List.fromArray(
 	[
 		A2(
 		_elm_lang$svg$Svg$defs,
@@ -9204,10 +9204,10 @@ var _user$project$Diagram$gridFill = _elm_lang$core$Native_List.fromArray(
 					[
 						_elm_lang$svg$Svg_Attributes$id('smallGrid'),
 						_elm_lang$svg$Svg_Attributes$height(
-						_elm_lang$core$Basics$toString(_user$project$Diagram$textHeight / 4)),
+						_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$textHeight / 4)),
 						_elm_lang$svg$Svg_Attributes$patternUnits('userSpaceOnUse'),
 						_elm_lang$svg$Svg_Attributes$width(
-						_elm_lang$core$Basics$toString(_user$project$Diagram$textWidth / 4))
+						_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$textWidth / 4))
 					]),
 				_elm_lang$core$Native_List.fromArray(
 					[
@@ -9229,10 +9229,10 @@ var _user$project$Diagram$gridFill = _elm_lang$core$Native_List.fromArray(
 					[
 						_elm_lang$svg$Svg_Attributes$id('grid'),
 						_elm_lang$svg$Svg_Attributes$height(
-						_elm_lang$core$Basics$toString(_user$project$Diagram$textHeight)),
+						_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$textHeight)),
 						_elm_lang$svg$Svg_Attributes$patternUnits('userSpaceOnUse'),
 						_elm_lang$svg$Svg_Attributes$width(
-						_elm_lang$core$Basics$toString(_user$project$Diagram$textWidth))
+						_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$textWidth))
 					]),
 				_elm_lang$core$Native_List.fromArray(
 					[
@@ -9270,8 +9270,8 @@ var _user$project$Diagram$gridFill = _elm_lang$core$Native_List.fromArray(
 		_elm_lang$core$Native_List.fromArray(
 			[]))
 	]);
-var _user$project$Diagram$lineWidth = 1.0;
-var _user$project$Diagram$drawPathDef = F3(
+var _ivanceras$svgbob$Diagram$lineWidth = 1.0;
+var _ivanceras$svgbob$Diagram$drawPathDef = F3(
 	function (pathDefs, lineStroke, feature) {
 		var arrow = function () {
 			var _p25 = feature;
@@ -9289,7 +9289,7 @@ var _user$project$Diagram$drawPathDef = F3(
 				return _elm_lang$svg$Svg_Attributes$strokeDasharray('3 3');
 			}
 		}();
-		var _p27 = _elm_lang$core$Color$toRgb(_user$project$Diagram$color);
+		var _p27 = _elm_lang$core$Color$toRgb(_ivanceras$svgbob$Diagram$color);
 		var red = _p27.red;
 		var green = _p27.green;
 		var blue = _p27.blue;
@@ -9320,7 +9320,7 @@ var _user$project$Diagram$drawPathDef = F3(
 					_elm_lang$svg$Svg_Attributes$d(pathDefs),
 					_elm_lang$svg$Svg_Attributes$stroke(colorText),
 					_elm_lang$svg$Svg_Attributes$strokeWidth(
-					_elm_lang$core$Basics$toString(_user$project$Diagram$lineWidth)),
+					_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$lineWidth)),
 					_elm_lang$svg$Svg_Attributes$fill('transparent'),
 					dashed,
 					arrow
@@ -9328,13 +9328,13 @@ var _user$project$Diagram$drawPathDef = F3(
 			_elm_lang$core$Native_List.fromArray(
 				[]));
 	});
-var _user$project$Diagram$drawLine = F4(
+var _ivanceras$svgbob$Diagram$drawLine = F4(
 	function (start, end, lineStroke, feature) {
 		var ey = end.y;
 		var ex = end.x;
 		var sy = start.y;
 		var sx = start.x;
-		var _p28 = _elm_lang$core$Color$toRgb(_user$project$Diagram$color);
+		var _p28 = _elm_lang$core$Color$toRgb(_ivanceras$svgbob$Diagram$color);
 		var red = _p28.red;
 		var green = _p28.green;
 		var blue = _p28.blue;
@@ -9372,7 +9372,7 @@ var _user$project$Diagram$drawLine = F4(
 					_elm_lang$core$Basics$toString(ey)),
 					_elm_lang$svg$Svg_Attributes$stroke(colorText),
 					_elm_lang$svg$Svg_Attributes$strokeWidth(
-					_elm_lang$core$Basics$toString(_user$project$Diagram$lineWidth)),
+					_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$lineWidth)),
 					_elm_lang$svg$Svg_Attributes$strokeLinecap('round'),
 					_elm_lang$svg$Svg_Attributes$strokeLinejoin('mitter'),
 					function () {
@@ -9395,7 +9395,7 @@ var _user$project$Diagram$drawLine = F4(
 			_elm_lang$core$Native_List.fromArray(
 				[]));
 	});
-var _user$project$Diagram$drawPathLine = F4(
+var _ivanceras$svgbob$Diagram$drawPathLine = F4(
 	function (start, end, lineStroke, feature) {
 		var arrow = function () {
 			var _p31 = feature;
@@ -9435,9 +9435,9 @@ var _user$project$Diagram$drawPathLine = F4(
 				[
 					_elm_lang$svg$Svg_Attributes$d(paths),
 					_elm_lang$svg$Svg_Attributes$stroke(
-					_user$project$Diagram$colorText(_user$project$Diagram$color)),
+					_ivanceras$svgbob$Diagram$colorText(_ivanceras$svgbob$Diagram$color)),
 					_elm_lang$svg$Svg_Attributes$strokeWidth(
-					_elm_lang$core$Basics$toString(_user$project$Diagram$lineWidth)),
+					_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$lineWidth)),
 					_elm_lang$svg$Svg_Attributes$fill('none'),
 					dashed,
 					arrow
@@ -9445,7 +9445,7 @@ var _user$project$Diagram$drawPathLine = F4(
 			_elm_lang$core$Native_List.fromArray(
 				[]));
 	});
-var _user$project$Diagram$drawArc = F4(
+var _ivanceras$svgbob$Diagram$drawArc = F4(
 	function (start, end, radius, sweep) {
 		var sweepFlag = sweep ? '1' : '0';
 		var ey = end.y;
@@ -9477,600 +9477,620 @@ var _user$project$Diagram$drawArc = F4(
 				[
 					_elm_lang$svg$Svg_Attributes$d(paths),
 					_elm_lang$svg$Svg_Attributes$stroke(
-					_user$project$Diagram$colorText(_user$project$Diagram$color)),
+					_ivanceras$svgbob$Diagram$colorText(_ivanceras$svgbob$Diagram$color)),
 					_elm_lang$svg$Svg_Attributes$strokeWidth(
-					_elm_lang$core$Basics$toString(_user$project$Diagram$lineWidth)),
+					_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$lineWidth)),
 					_elm_lang$svg$Svg_Attributes$fill('none')
 				]),
 			_elm_lang$core$Native_List.fromArray(
 				[]));
 	});
-var _user$project$Diagram$fontSize = 14.0;
-var _user$project$Diagram$Model = F3(
+var _ivanceras$svgbob$Diagram$fontSize = 14.0;
+var _ivanceras$svgbob$Diagram$Model = F3(
 	function (a, b, c) {
 		return {rows: a, columns: b, lines: c};
 	});
-var _user$project$Diagram$Point = F2(
+var _ivanceras$svgbob$Diagram$Point = F2(
 	function (a, b) {
 		return {x: a, y: b};
 	});
-var _user$project$Diagram$Expanded = {ctor: 'Expanded'};
-var _user$project$Diagram$density = _user$project$Diagram$Expanded;
-var _user$project$Diagram$Medium = {ctor: 'Medium'};
-var _user$project$Diagram$Compact = {ctor: 'Compact'};
-var _user$project$Diagram$BottomRight = {ctor: 'BottomRight'};
-var _user$project$Diagram$BottomLeft = {ctor: 'BottomLeft'};
-var _user$project$Diagram$TopRight = {ctor: 'TopRight'};
-var _user$project$Diagram$TopLeft = {ctor: 'TopLeft'};
-var _user$project$Diagram$Right = {ctor: 'Right'};
-var _user$project$Diagram$Left = {ctor: 'Left'};
-var _user$project$Diagram$Bottom = {ctor: 'Bottom'};
-var _user$project$Diagram$Top = {ctor: 'Top'};
-var _user$project$Diagram$SlantLeft = {ctor: 'SlantLeft'};
-var _user$project$Diagram$SlantRight = {ctor: 'SlantRight'};
-var _user$project$Diagram$LowHorizontal = {ctor: 'LowHorizontal'};
-var _user$project$Diagram$Horizontal = {ctor: 'Horizontal'};
-var _user$project$Diagram$Vertical = {ctor: 'Vertical'};
-var _user$project$Diagram$Trim = {ctor: 'Trim'};
-var _user$project$Diagram$Extend = {ctor: 'Extend'};
-var _user$project$Diagram$Sharp = {ctor: 'Sharp'};
-var _user$project$Diagram$Smooth = {ctor: 'Smooth'};
-var _user$project$Diagram$Solid = {ctor: 'Solid'};
-var _user$project$Diagram$Dashed = {ctor: 'Dashed'};
-var _user$project$Diagram$Junction = F3(
+var _ivanceras$svgbob$Diagram$Expanded = {ctor: 'Expanded'};
+var _ivanceras$svgbob$Diagram$density = _ivanceras$svgbob$Diagram$Expanded;
+var _ivanceras$svgbob$Diagram$Medium = {ctor: 'Medium'};
+var _ivanceras$svgbob$Diagram$Compact = {ctor: 'Compact'};
+var _ivanceras$svgbob$Diagram$BottomRight = {ctor: 'BottomRight'};
+var _ivanceras$svgbob$Diagram$BottomLeft = {ctor: 'BottomLeft'};
+var _ivanceras$svgbob$Diagram$TopRight = {ctor: 'TopRight'};
+var _ivanceras$svgbob$Diagram$TopLeft = {ctor: 'TopLeft'};
+var _ivanceras$svgbob$Diagram$Right = {ctor: 'Right'};
+var _ivanceras$svgbob$Diagram$Left = {ctor: 'Left'};
+var _ivanceras$svgbob$Diagram$Bottom = {ctor: 'Bottom'};
+var _ivanceras$svgbob$Diagram$Top = {ctor: 'Top'};
+var _ivanceras$svgbob$Diagram$SlantLeft = {ctor: 'SlantLeft'};
+var _ivanceras$svgbob$Diagram$SlantRight = {ctor: 'SlantRight'};
+var _ivanceras$svgbob$Diagram$LowHorizontal = {ctor: 'LowHorizontal'};
+var _ivanceras$svgbob$Diagram$Horizontal = {ctor: 'Horizontal'};
+var _ivanceras$svgbob$Diagram$Vertical = {ctor: 'Vertical'};
+var _ivanceras$svgbob$Diagram$Trim = {ctor: 'Trim'};
+var _ivanceras$svgbob$Diagram$Extend = {ctor: 'Extend'};
+var _ivanceras$svgbob$Diagram$Sharp = {ctor: 'Sharp'};
+var _ivanceras$svgbob$Diagram$Smooth = {ctor: 'Smooth'};
+var _ivanceras$svgbob$Diagram$Solid = {ctor: 'Solid'};
+var _ivanceras$svgbob$Diagram$Dashed = {ctor: 'Dashed'};
+var _ivanceras$svgbob$Diagram$Junction = F3(
 	function (a, b, c) {
 		return {ctor: 'Junction', _0: a, _1: b, _2: c};
 	});
-var _user$project$Diagram$Curve = F3(
+var _ivanceras$svgbob$Diagram$Curve = F3(
 	function (a, b, c) {
 		return {ctor: 'Curve', _0: a, _1: b, _2: c};
 	});
-var _user$project$Diagram$Action = F5(
+var _ivanceras$svgbob$Diagram$Action = F5(
 	function (a, b, c, d, e) {
 		return {ctor: 'Action', _0: a, _1: b, _2: c, _3: d, _4: e};
 	});
-var _user$project$Diagram$Corner = F2(
+var _ivanceras$svgbob$Diagram$Corner = F2(
 	function (a, b) {
 		return {ctor: 'Corner', _0: a, _1: b};
 	});
-var _user$project$Diagram$Arrow = function (a) {
+var _ivanceras$svgbob$Diagram$Arrow = function (a) {
 	return {ctor: 'Arrow', _0: a};
 };
-var _user$project$Diagram$Piece = F3(
+var _ivanceras$svgbob$Diagram$Piece = F3(
 	function (a, b, c) {
 		return {ctor: 'Piece', _0: a, _1: b, _2: c};
 	});
-var _user$project$Diagram$Text = function (a) {
+var _ivanceras$svgbob$Diagram$Text = function (a) {
 	return {ctor: 'Text', _0: a};
 };
-var _user$project$Diagram$High = {ctor: 'High'};
-var _user$project$Diagram$Mid = {ctor: 'Mid'};
-var _user$project$Diagram$Low = {ctor: 'Low'};
-var _user$project$Diagram$Quarter3 = {ctor: 'Quarter3'};
-var _user$project$Diagram$Quarter = {ctor: 'Quarter'};
-var _user$project$Diagram$Half = {ctor: 'Half'};
-var _user$project$Diagram$Full = {ctor: 'Full'};
-var _user$project$Diagram$componentMatchList = F3(
+var _ivanceras$svgbob$Diagram$High = {ctor: 'High'};
+var _ivanceras$svgbob$Diagram$Mid = {ctor: 'Mid'};
+var _ivanceras$svgbob$Diagram$Low = {ctor: 'Low'};
+var _ivanceras$svgbob$Diagram$Quarter3 = {ctor: 'Quarter3'};
+var _ivanceras$svgbob$Diagram$Quarter = {ctor: 'Quarter'};
+var _ivanceras$svgbob$Diagram$Half = {ctor: 'Half'};
+var _ivanceras$svgbob$Diagram$Full = {ctor: 'Full'};
+var _ivanceras$svgbob$Diagram$componentMatchList = F3(
 	function (x, y, model) {
-		var bottomRight = A3(_user$project$Diagram$bottomRightOf, x, y, model);
-		var bottomLeft = A3(_user$project$Diagram$bottomLeftOf, x, y, model);
-		var topRight = A3(_user$project$Diagram$topRightOf, x, y, model);
-		var topLeft = A3(_user$project$Diagram$topLeftOf, x, y, model);
-		var right = A3(_user$project$Diagram$rightOf, x, y, model);
-		var left = A3(_user$project$Diagram$leftOf, x, y, model);
-		var bottom = A3(_user$project$Diagram$bottomOf, x, y, model);
-		var top = A3(_user$project$Diagram$topOf, x, y, model);
-		var $char = A3(_user$project$Diagram$get, x, y, model);
+		var bottomRight = A3(_ivanceras$svgbob$Diagram$bottomRightOf, x, y, model);
+		var bottomLeft = A3(_ivanceras$svgbob$Diagram$bottomLeftOf, x, y, model);
+		var topRight = A3(_ivanceras$svgbob$Diagram$topRightOf, x, y, model);
+		var topLeft = A3(_ivanceras$svgbob$Diagram$topLeftOf, x, y, model);
+		var right = A3(_ivanceras$svgbob$Diagram$rightOf, x, y, model);
+		var left = A3(_ivanceras$svgbob$Diagram$leftOf, x, y, model);
+		var bottom = A3(_ivanceras$svgbob$Diagram$bottomOf, x, y, model);
+		var top = A3(_ivanceras$svgbob$Diagram$topOf, x, y, model);
+		var $char = A3(_ivanceras$svgbob$Diagram$get, x, y, model);
 		return _elm_lang$core$Native_List.fromArray(
 			[
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isVertical) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric))),
-				_1: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$Vertical, _user$project$Diagram$Solid)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isVertical) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric))),
+				_1: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Vertical, _ivanceras$svgbob$Diagram$Solid)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isHorizontal) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric))),
-				_1: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$Horizontal, _user$project$Diagram$Solid)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isHorizontal) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric))),
+				_1: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Horizontal, _ivanceras$svgbob$Diagram$Solid)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isLowHorizontal) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric))),
-				_1: A3(_user$project$Diagram$Piece, _user$project$Diagram$Low, _user$project$Diagram$Horizontal, _user$project$Diagram$Solid)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isLowHorizontal) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric))),
+				_1: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$Horizontal, _ivanceras$svgbob$Diagram$Solid)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isSlantLeft) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric))),
-				_1: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$SlantLeft, _user$project$Diagram$Solid)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isSlantLeft) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric))),
+				_1: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$SlantLeft, _ivanceras$svgbob$Diagram$Solid)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isSlantRight) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric))),
-				_1: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$SlantRight, _user$project$Diagram$Solid)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isSlantRight) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric))),
+				_1: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$SlantRight, _ivanceras$svgbob$Diagram$Solid)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isVerticalDashed) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric))),
-				_1: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$Vertical, _user$project$Diagram$Dashed)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isVerticalDashed) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric))),
+				_1: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Vertical, _ivanceras$svgbob$Diagram$Dashed)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isHorizontalDashed) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric))),
-				_1: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$Horizontal, _user$project$Diagram$Dashed)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isHorizontalDashed) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric))),
+				_1: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Horizontal, _ivanceras$svgbob$Diagram$Dashed)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowUp) && (A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric)))),
-				_1: _user$project$Diagram$Arrow(_user$project$Diagram$Top)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowUp) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric)))),
+				_1: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$Top)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowLeft) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric)))),
-				_1: _user$project$Diagram$Arrow(_user$project$Diagram$Left)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowLeft) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric)))),
+				_1: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$Left)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowRight) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric)))),
-				_1: _user$project$Diagram$Arrow(_user$project$Diagram$Right)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowRight) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric)))),
+				_1: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$Right)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowDown) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric)))),
-				_1: _user$project$Diagram$Arrow(_user$project$Diagram$Bottom)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowDown) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric)))),
+				_1: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$Bottom)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowUp) && (A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isSlantLeft) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric)))),
-				_1: _user$project$Diagram$Arrow(_user$project$Diagram$TopLeft)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowUp) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric)))),
+				_1: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$TopLeft)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowDown) && (A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric)))),
-				_1: _user$project$Diagram$Arrow(_user$project$Diagram$BottomLeft)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowDown) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric)))),
+				_1: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$BottomLeft)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowDown) && (A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric)))),
-				_1: _user$project$Diagram$Arrow(_user$project$Diagram$BottomRight)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowDown) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric)))),
+				_1: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$BottomRight)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isArrowUp) && (A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight) && (_elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
-					A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isAlphaNumeric)))),
-				_1: _user$project$Diagram$Arrow(_user$project$Diagram$TopRight)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isArrowUp) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight) && (_elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isAlphaNumeric)) && _elm_lang$core$Basics$not(
+					A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isAlphaNumeric)))),
+				_1: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$TopRight)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp)
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$Left]),
-					_user$project$Diagram$Sharp)
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Sharp)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left]),
-					_user$project$Diagram$Sharp)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Sharp)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isSlantLeft)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Left, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$TopLeft]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Left, _user$project$Diagram$TopRight]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$TopRight]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$TopRight]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopRight]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Left, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$TopLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$TopRight]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$TopLeft]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$TopRight]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$TopLeft, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$TopLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isSlantLeft)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$TopRight, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isSlantLeft)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isOpenCurve) && (A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isSlantLeft)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$Left, _user$project$Diagram$Mid, _user$project$Diagram$Quarter)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isCloseCurve) && (A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$Right, _user$project$Diagram$Mid, _user$project$Diagram$Quarter)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isRoundLow) && A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isRoundLow)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$Top, _user$project$Diagram$Mid, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isRoundHigh) && A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isRoundHigh)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$Bottom, _user$project$Diagram$Mid, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isOpenCurve) && (A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isRound) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isRound)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$Left, _user$project$Diagram$Mid, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isCloseCurve) && (A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isRound) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isRound)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$Right, _user$project$Diagram$Mid, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRoundLow) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isOpenCurve)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$TopLeft, _user$project$Diagram$Mid, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRoundLow) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isCloseCurve)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$TopRight, _user$project$Diagram$Mid, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRoundHigh) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isOpenCurve)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$BottomLeft, _user$project$Diagram$Mid, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRoundHigh) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isCloseCurve)),
-				_1: A3(_user$project$Diagram$Curve, _user$project$Diagram$BottomRight, _user$project$Diagram$Mid, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$Right]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$Left]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isOpenCurve) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Quarter)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isCloseCurve) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Quarter)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isRoundLow) && A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isRoundLow)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isRoundHigh) && A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isRoundHigh)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isOpenCurve) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isRound) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isRound)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isCloseCurve) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isRound) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isRound)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRoundLow) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isOpenCurve)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRoundLow) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isCloseCurve)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRoundHigh) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isOpenCurve)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$BottomLeft, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRoundHigh) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isCloseCurve)),
+				_1: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$BottomRight, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Right]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isLowHorizontal) && A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Low,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Right]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isLowHorizontal) && A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical)),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Low,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left]),
-					_user$project$Diagram$Smooth)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isLowHorizontal) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isVertical),
-				_1: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Left, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isLowHorizontal) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isVertical),
-				_1: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Right, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isLowHorizontal) && A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isVertical),
-				_1: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Right, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isLowHorizontal) && A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isVertical),
-				_1: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Left, _user$project$Diagram$Half)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isLowHorizontal) && A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isSlantRight),
-				_1: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Left, _user$project$Diagram$Full)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isLowHorizontal) && A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isSlantLeft),
-				_1: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Right, _user$project$Diagram$Full)
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical))),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isLowHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Low,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Bottom, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical))),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isLowHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical)),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Low,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Bottom, _user$project$Diagram$Left]),
-					_user$project$Diagram$Sharp)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Smooth)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal))),
-				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
-					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isLowHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isVertical),
+				_1: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Half)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical))),
-				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
-					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Left, _user$project$Diagram$Right, _user$project$Diagram$Bottom]),
-					_user$project$Diagram$Sharp)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isLowHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isVertical),
+				_1: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Half)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight) && (A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight) && A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal))),
-				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
-					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$TopRight, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isLowHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isVertical),
+				_1: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Half)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft) && (A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isSlantLeft) && A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal))),
-				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
-					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$TopLeft, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Smooth)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isLowHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isVertical),
+				_1: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Half)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && (A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight))),
-				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
-					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Bottom, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isLowHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isSlantRight),
+				_1: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Full)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical) && A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal)))),
-				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
-					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left, _user$project$Diagram$Bottom, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp)
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isLowHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isSlantLeft),
+				_1: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Full)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: (A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) || (A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) || A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isAsterisk))) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && (A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical) && (A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft) && (A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight) && (A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isSlantLeft)))))),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical))),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Bottom, _user$project$Diagram$TopLeft, _user$project$Diagram$TopRight, _user$project$Diagram$BottomLeft, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Sharp)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp)
 			},
 				{
 				ctor: '_Tuple2',
-				_0: (A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isIntersection) || (A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isRound) || A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isAsterisk))) && (A2(_user$project$Diagram$isNeighbor, top, _user$project$Diagram$isVertical) && (A2(_user$project$Diagram$isNeighbor, left, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, bottom, _user$project$Diagram$isVertical) && (A2(_user$project$Diagram$isNeighbor, right, _user$project$Diagram$isHorizontal) && (A2(_user$project$Diagram$isNeighbor, topLeft, _user$project$Diagram$isSlantLeft) && (A2(_user$project$Diagram$isNeighbor, topRight, _user$project$Diagram$isSlantRight) && (A2(_user$project$Diagram$isNeighbor, bottomLeft, _user$project$Diagram$isSlantRight) && A2(_user$project$Diagram$isNeighbor, bottomRight, _user$project$Diagram$isSlantLeft)))))))),
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical))),
 				_1: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left, _user$project$Diagram$Bottom, _user$project$Diagram$Right, _user$project$Diagram$TopLeft, _user$project$Diagram$TopRight, _user$project$Diagram$BottomLeft, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Sharp)
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Sharp)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal))),
+				_1: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical))),
+				_1: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Bottom]),
+					_ivanceras$svgbob$Diagram$Sharp)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight) && A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal))),
+				_1: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft) && A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal))),
+				_1: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight))),
+				_1: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical) && A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal)))),
+				_1: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: (A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) || (A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) || A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isAsterisk))) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft)))))),
+				_1: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$BottomLeft, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Sharp)
+			},
+				{
+				ctor: '_Tuple2',
+				_0: (A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isIntersection) || (A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isRound) || A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isAsterisk))) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, top, _ivanceras$svgbob$Diagram$isVertical) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, left, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottom, _ivanceras$svgbob$Diagram$isVertical) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, right, _ivanceras$svgbob$Diagram$isHorizontal) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topLeft, _ivanceras$svgbob$Diagram$isSlantLeft) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, topRight, _ivanceras$svgbob$Diagram$isSlantRight) && (A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomLeft, _ivanceras$svgbob$Diagram$isSlantRight) && A2(_ivanceras$svgbob$Diagram$isNeighbor, bottomRight, _ivanceras$svgbob$Diagram$isSlantLeft)))))))),
+				_1: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$BottomLeft, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Sharp)
 			}
 			]);
 	});
-var _user$project$Diagram$matchComponent = F3(
+var _ivanceras$svgbob$Diagram$matchComponent = F3(
 	function (x, y, model) {
 		var comp = _elm_lang$core$List$head(
 			A2(
@@ -10080,16 +10100,16 @@ var _user$project$Diagram$matchComponent = F3(
 					return _p34._0 ? _elm_lang$core$Maybe$Just(_p34._1) : _elm_lang$core$Maybe$Nothing;
 				},
 				_elm_lang$core$List$reverse(
-					A3(_user$project$Diagram$componentMatchList, x, y, model))));
-		var $char = A3(_user$project$Diagram$get, x, y, model);
+					A3(_ivanceras$svgbob$Diagram$componentMatchList, x, y, model))));
+		var $char = A3(_ivanceras$svgbob$Diagram$get, x, y, model);
 		var _p35 = comp;
 		if (_p35.ctor === 'Just') {
 			return _elm_lang$core$Maybe$Just(_p35._0);
 		} else {
-			if (A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isNotSpace)) {
+			if (A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isNotSpace)) {
 				var _p36 = A2(_elm_lang$core$Debug$log, 'Matching component to char', $char);
 				return _elm_lang$core$Maybe$Just(
-					_user$project$Diagram$Text(
+					_ivanceras$svgbob$Diagram$Text(
 						A2(
 							_elm_lang$core$Maybe$withDefault,
 							_elm_lang$core$Native_Utils.chr(' '),
@@ -10099,973 +10119,921 @@ var _user$project$Diagram$matchComponent = F3(
 			}
 		}
 	});
-var _user$project$Diagram$TextPath = function (a) {
+var _ivanceras$svgbob$Diagram$TextPath = function (a) {
 	return {ctor: 'TextPath', _0: a};
 };
-var _user$project$Diagram$DashedLine = function (a) {
+var _ivanceras$svgbob$Diagram$DashedLine = function (a) {
 	return {ctor: 'DashedLine', _0: a};
 };
-var _user$project$Diagram$Arc = function (a) {
+var _ivanceras$svgbob$Diagram$Arc = function (a) {
 	return {ctor: 'Arc', _0: a};
 };
-var _user$project$Diagram$ArrowLine = function (a) {
+var _ivanceras$svgbob$Diagram$ArrowLine = function (a) {
 	return {ctor: 'ArrowLine', _0: a};
 };
-var _user$project$Diagram$Line = function (a) {
+var _ivanceras$svgbob$Diagram$Line = function (a) {
 	return {ctor: 'Line', _0: a};
 };
-var _user$project$Diagram$componentPathList = F2(
+var _ivanceras$svgbob$Diagram$componentPathList = F2(
 	function (x, y) {
-		var ey = _user$project$Diagram$measureY(y) + _user$project$Diagram$textHeight;
-		var ex = _user$project$Diagram$measureX(x) + _user$project$Diagram$textWidth;
-		var q3y = _user$project$Diagram$measureY(y) + ((_user$project$Diagram$textHeight * 3) / 4);
-		var q3x = _user$project$Diagram$measureX(x) + ((_user$project$Diagram$textWidth * 3) / 4);
-		var my = _user$project$Diagram$measureY(y) + (_user$project$Diagram$textHeight / 2);
-		var mx = _user$project$Diagram$measureX(x) + (_user$project$Diagram$textWidth / 2);
-		var qy = _user$project$Diagram$measureY(y) + (_user$project$Diagram$textHeight / 4);
-		var qx = _user$project$Diagram$measureX(x) + (_user$project$Diagram$textWidth / 4);
-		var sy = _user$project$Diagram$measureY(y);
-		var verticalPath = _user$project$Diagram$Line(
+		var ey = _ivanceras$svgbob$Diagram$measureY(y) + _ivanceras$svgbob$Diagram$textHeight;
+		var ex = _ivanceras$svgbob$Diagram$measureX(x) + _ivanceras$svgbob$Diagram$textWidth;
+		var q3y = _ivanceras$svgbob$Diagram$measureY(y) + ((_ivanceras$svgbob$Diagram$textHeight * 3) / 4);
+		var q3x = _ivanceras$svgbob$Diagram$measureX(x) + ((_ivanceras$svgbob$Diagram$textWidth * 3) / 4);
+		var my = _ivanceras$svgbob$Diagram$measureY(y) + (_ivanceras$svgbob$Diagram$textHeight / 2);
+		var mx = _ivanceras$svgbob$Diagram$measureX(x) + (_ivanceras$svgbob$Diagram$textWidth / 2);
+		var qy = _ivanceras$svgbob$Diagram$measureY(y) + (_ivanceras$svgbob$Diagram$textHeight / 4);
+		var qx = _ivanceras$svgbob$Diagram$measureX(x) + (_ivanceras$svgbob$Diagram$textWidth / 4);
+		var sy = _ivanceras$svgbob$Diagram$measureY(y);
+		var verticalPath = _ivanceras$svgbob$Diagram$Line(
 			{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$Point, mx, sy),
-				_1: A2(_user$project$Diagram$Point, mx, ey)
+				_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+				_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 			});
-		var sx = _user$project$Diagram$measureX(x);
-		var horizontalPath = _user$project$Diagram$Line(
+		var sx = _ivanceras$svgbob$Diagram$measureX(x);
+		var horizontalPath = _ivanceras$svgbob$Diagram$Line(
 			{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$Point, sx, my),
-				_1: A2(_user$project$Diagram$Point, ex, my)
+				_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+				_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 			});
-		var slantLeftPath = _user$project$Diagram$Line(
+		var slantLeftPath = _ivanceras$svgbob$Diagram$Line(
 			{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$Point, sx, sy),
-				_1: A2(_user$project$Diagram$Point, ex, ey)
+				_0: A2(_ivanceras$svgbob$Diagram$Point, sx, sy),
+				_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
 			});
-		var slantRightPath = _user$project$Diagram$Line(
+		var slantRightPath = _ivanceras$svgbob$Diagram$Line(
 			{
 				ctor: '_Tuple2',
-				_0: A2(_user$project$Diagram$Point, sx, ey),
-				_1: A2(_user$project$Diagram$Point, ex, sy)
+				_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+				_1: A2(_ivanceras$svgbob$Diagram$Point, ex, sy)
 			});
-		var th4 = _user$project$Diagram$textHeight / 4;
-		var th2 = _user$project$Diagram$textHeight / 2;
-		var tw4 = _user$project$Diagram$textWidth / 4;
-		var tw2 = _user$project$Diagram$textWidth / 2;
+		var th4 = _ivanceras$svgbob$Diagram$textHeight / 4;
+		var th2 = _ivanceras$svgbob$Diagram$textHeight / 2;
+		var tw4 = _ivanceras$svgbob$Diagram$textWidth / 4;
+		var tw2 = _ivanceras$svgbob$Diagram$textWidth / 2;
 		return _elm_lang$core$Native_List.fromArray(
 			[
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$Horizontal, _user$project$Diagram$Solid),
+				_0: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Horizontal, _ivanceras$svgbob$Diagram$Solid),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$Horizontal, _user$project$Diagram$Dashed),
+				_0: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Horizontal, _ivanceras$svgbob$Diagram$Dashed),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$DashedLine(
+						_ivanceras$svgbob$Diagram$DashedLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Piece, _user$project$Diagram$Low, _user$project$Diagram$Horizontal, _user$project$Diagram$Solid),
+				_0: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$Horizontal, _ivanceras$svgbob$Diagram$Solid),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, ex, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Piece, _user$project$Diagram$Low, _user$project$Diagram$Horizontal, _user$project$Diagram$Dashed),
+				_0: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$Horizontal, _ivanceras$svgbob$Diagram$Dashed),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$DashedLine(
+						_ivanceras$svgbob$Diagram$DashedLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, ex, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$Vertical, _user$project$Diagram$Solid),
+				_0: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Vertical, _ivanceras$svgbob$Diagram$Solid),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$Vertical, _user$project$Diagram$Dashed),
+				_0: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Vertical, _ivanceras$svgbob$Diagram$Dashed),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$DashedLine(
+						_ivanceras$svgbob$Diagram$DashedLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$SlantLeft, _user$project$Diagram$Solid),
+				_0: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$SlantLeft, _ivanceras$svgbob$Diagram$Solid),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, sy),
-							_1: A2(_user$project$Diagram$Point, ex, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Piece, _user$project$Diagram$Mid, _user$project$Diagram$SlantRight, _user$project$Diagram$Solid),
+				_0: A3(_ivanceras$svgbob$Diagram$Piece, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$SlantRight, _ivanceras$svgbob$Diagram$Solid),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, ex, sy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, sy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: _user$project$Diagram$Arrow(_user$project$Diagram$Top),
+				_0: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$Top),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$ArrowLine(
+						_ivanceras$svgbob$Diagram$ArrowLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, ey),
-							_1: A2(_user$project$Diagram$Point, mx, sy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, sy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: _user$project$Diagram$Arrow(_user$project$Diagram$Bottom),
+				_0: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$Bottom),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$ArrowLine(
+						_ivanceras$svgbob$Diagram$ArrowLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: _user$project$Diagram$Arrow(_user$project$Diagram$Left),
+				_0: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$Left),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$ArrowLine(
+						_ivanceras$svgbob$Diagram$ArrowLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, my),
-							_1: A2(_user$project$Diagram$Point, mx, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, my)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: _user$project$Diagram$Arrow(_user$project$Diagram$Right),
+				_0: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$Right),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$ArrowLine(
+						_ivanceras$svgbob$Diagram$ArrowLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, mx, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, my)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: _user$project$Diagram$Arrow(_user$project$Diagram$TopLeft),
+				_0: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$TopLeft),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$ArrowLine(
+						_ivanceras$svgbob$Diagram$ArrowLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, ey),
-							_1: A2(_user$project$Diagram$Point, qx, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, qy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: _user$project$Diagram$Arrow(_user$project$Diagram$TopRight),
+				_0: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$TopRight),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$ArrowLine(
+						_ivanceras$svgbob$Diagram$ArrowLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, q3x, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: _user$project$Diagram$Arrow(_user$project$Diagram$BottomLeft),
+				_0: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$BottomLeft),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$ArrowLine(
+						_ivanceras$svgbob$Diagram$ArrowLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, sy),
-							_1: A2(_user$project$Diagram$Point, qx, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: _user$project$Diagram$Arrow(_user$project$Diagram$BottomRight),
+				_0: _ivanceras$svgbob$Diagram$Arrow(_ivanceras$svgbob$Diagram$BottomRight),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$ArrowLine(
+						_ivanceras$svgbob$Diagram$ArrowLine(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, sy),
-							_1: A2(_user$project$Diagram$Point, q3x, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, my),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$Left]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, mx, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, my)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, my),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, my)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, mx, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, my)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, my),
-							_1: A2(_user$project$Diagram$Point, mx, sy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, sy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Bottom, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Bottom, _user$project$Diagram$Left]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, mx, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, my)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, my)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Left, _user$project$Diagram$Right, _user$project$Diagram$Bottom]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Bottom]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, my),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, ex, my),
-							_1: A2(_user$project$Diagram$Point, qx, q3y),
-							_2: _user$project$Diagram$arcRadius * 2,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 2,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, qx, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Left, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, q3x, q3y),
-							_1: A2(_user$project$Diagram$Point, sx, my),
-							_2: _user$project$Diagram$arcRadius * 2,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 2,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, ey),
-							_1: A2(_user$project$Diagram$Point, q3x, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$TopLeft]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, qx, qy),
-							_1: A2(_user$project$Diagram$Point, ex, my),
-							_2: _user$project$Diagram$arcRadius * 2,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 2,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, sy),
-							_1: A2(_user$project$Diagram$Point, qx, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, qy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Left, _user$project$Diagram$TopRight]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$TopRight]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, q3x, qy),
-							_2: _user$project$Diagram$arcRadius * 2,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 2,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, q3x, qy),
-							_1: A2(_user$project$Diagram$Point, ex, sy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, sy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$TopRight]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopRight]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, q3x, qy),
-							_1: A2(_user$project$Diagram$Point, ex, my),
-							_2: _user$project$Diagram$arcRadius,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, q3x, qy),
-							_1: A2(_user$project$Diagram$Point, ex, sy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, sy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Left, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$TopLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, qx, q3y),
-							_1: A2(_user$project$Diagram$Point, sx, my),
-							_2: _user$project$Diagram$arcRadius,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
+							_3: true
+						}),
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx, sy)
+						})
+					])
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
+				_1: _elm_lang$core$Native_List.fromArray(
+					[
+						_ivanceras$svgbob$Diagram$Arc(
+						{
+							ctor: '_Tuple4',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, qx, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$TopLeft]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, ey),
-							_1: A2(_user$project$Diagram$Point, mx, q3y)
-						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, mx, q3y),
-							_1: A2(_user$project$Diagram$Point, qx, qy),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
+							_3: true
+						}),
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
+						})
+					])
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$TopLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
+				_1: _elm_lang$core$Native_List.fromArray(
+					[
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y)
+						}),
+						_ivanceras$svgbob$Diagram$Arc(
+						{
+							ctor: '_Tuple4',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, qy),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, qx, qy),
-							_1: A2(_user$project$Diagram$Point, sx, sy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx, sy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, qy)
 						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, mx, qy),
-							_1: A2(_user$project$Diagram$Point, q3x, q3y),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, q3x, q3y),
-							_1: A2(_user$project$Diagram$Point, ex, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left, _user$project$Diagram$Bottom, _user$project$Diagram$Right]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left, _user$project$Diagram$Bottom, _user$project$Diagram$Right, _user$project$Diagram$TopLeft, _user$project$Diagram$TopRight, _user$project$Diagram$BottomLeft, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$BottomLeft, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, sy),
-							_1: A2(_user$project$Diagram$Point, ex, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, ex, sy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, sy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$Right]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, ex, my),
-							_1: A2(_user$project$Diagram$Point, mx, q3y),
-							_2: _user$project$Diagram$arcRadius,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, q3y),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$Left]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, mx, q3y),
-							_1: A2(_user$project$Diagram$Point, sx, my),
-							_2: _user$project$Diagram$arcRadius,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, q3y),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Right]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, mx, qy),
-							_1: A2(_user$project$Diagram$Point, ex, my),
-							_2: _user$project$Diagram$arcRadius,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, qy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, mx, qy),
-							_2: _user$project$Diagram$arcRadius,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, qy),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, qy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Low,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Low,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Right]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Right]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y)
 						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, mx, q3y),
-							_1: A2(_user$project$Diagram$Point, ex, ey),
-							_2: _user$project$Diagram$arcRadius,
-							_3: false
-						})
-					])
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Low,
-					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Left]),
-					_user$project$Diagram$Smooth),
-				_1: _elm_lang$core$Native_List.fromArray(
-					[
-						_user$project$Diagram$Arc(
-						{
-							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, mx, q3y),
-							_2: _user$project$Diagram$arcRadius,
-							_3: false
-						}),
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, q3y),
-							_1: A2(_user$project$Diagram$Point, mx, sy)
-						})
-					])
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Left, _user$project$Diagram$Half),
-				_1: _elm_lang$core$Native_List.fromArray(
-					[
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, ey),
-							_1: A2(_user$project$Diagram$Point, sx - tw2, ey)
-						})
-					])
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Left, _user$project$Diagram$Full),
-				_1: _elm_lang$core$Native_List.fromArray(
-					[
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, ey),
-							_1: A2(_user$project$Diagram$Point, sx - _user$project$Diagram$textWidth, ey)
-						})
-					])
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Right, _user$project$Diagram$Full),
-				_1: _elm_lang$core$Native_List.fromArray(
-					[
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, ex + _user$project$Diagram$textWidth, ey)
-						})
-					])
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A5(_user$project$Diagram$Action, _user$project$Diagram$Low, _user$project$Diagram$LowHorizontal, _user$project$Diagram$Extend, _user$project$Diagram$Right, _user$project$Diagram$Half),
-				_1: _elm_lang$core$Native_List.fromArray(
-					[
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, ex + tw2, ey)
-						})
-					])
-			},
-				{
-				ctor: '_Tuple2',
-				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
-					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$TopRight, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth),
-				_1: _elm_lang$core$Native_List.fromArray(
-					[
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, ex, sy)
-						}),
-						_user$project$Diagram$Arc(
-						{
-							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, ex, my),
-							_1: A2(_user$project$Diagram$Point, qx, q3y),
-							_2: _user$project$Diagram$arcRadius * 2,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
 							_3: false
 						})
 					])
@@ -11073,31 +11041,103 @@ var _user$project$Diagram$componentPathList = F2(
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Low,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Right, _user$project$Diagram$TopLeft, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Left]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, sy),
-							_1: A2(_user$project$Diagram$Point, ex, ey)
-						}),
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, my),
-							_1: A2(_user$project$Diagram$Point, q3x, my)
-						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, qx, qy),
-							_1: A2(_user$project$Diagram$Point, q3x, my),
-							_2: _user$project$Diagram$arcRadius * 2,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_2: _ivanceras$svgbob$Diagram$arcRadius,
+							_3: false
+						}),
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, sy)
+						})
+					])
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Half),
+				_1: _elm_lang$core$Native_List.fromArray(
+					[
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx - tw2, ey)
+						})
+					])
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Full),
+				_1: _elm_lang$core$Native_List.fromArray(
+					[
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx - _ivanceras$svgbob$Diagram$textWidth, ey)
+						})
+					])
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Full),
+				_1: _elm_lang$core$Native_List.fromArray(
+					[
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex + _ivanceras$svgbob$Diagram$textWidth, ey)
+						})
+					])
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A5(_ivanceras$svgbob$Diagram$Action, _ivanceras$svgbob$Diagram$Low, _ivanceras$svgbob$Diagram$LowHorizontal, _ivanceras$svgbob$Diagram$Extend, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Half),
+				_1: _elm_lang$core$Native_List.fromArray(
+					[
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex + tw2, ey)
+						})
+					])
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
+				_1: _elm_lang$core$Native_List.fromArray(
+					[
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, sy)
+						}),
+						_ivanceras$svgbob$Diagram$Arc(
+						{
+							ctor: '_Tuple4',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 2,
 							_3: false
 						})
 					])
@@ -11105,31 +11145,31 @@ var _user$project$Diagram$componentPathList = F2(
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Bottom, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, qx, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, my)
 						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, qx, q3y),
-							_1: A2(_user$project$Diagram$Point, mx, qy),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 2,
 							_3: false
 						})
 					])
@@ -11137,277 +11177,309 @@ var _user$project$Diagram$componentPathList = F2(
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Bottom, _user$project$Diagram$TopRight]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, sy),
-							_1: A2(_user$project$Diagram$Point, q3x, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, ey)
 						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y)
+						}),
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, q3x, qy),
-							_1: A2(_user$project$Diagram$Point, mx, q3y),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, qy),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
-						}),
-						_user$project$Diagram$Line(
-						{
-							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, ey),
-							_1: A2(_user$project$Diagram$Point, mx, q3y)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$TopRight]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, qx, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy)
 						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, qx, q3y),
-							_1: A2(_user$project$Diagram$Point, mx, qy),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, mx, sy),
-							_1: A2(_user$project$Diagram$Point, mx, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, q3y)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$TopLeft, _user$project$Diagram$BottomLeft]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, sy),
-							_1: A2(_user$project$Diagram$Point, qx, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y)
 						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, qx, q3y),
-							_1: A2(_user$project$Diagram$Point, qx, qy),
-							_2: _user$project$Diagram$arcRadius * 2,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, qy),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, qx, q3y)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, mx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, mx, qy)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$TopRight, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Smooth),
+						[_ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$BottomLeft]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, ex, sy),
-							_1: A2(_user$project$Diagram$Point, q3x, qy)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, qy)
 						}),
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, q3x, qy),
-							_1: A2(_user$project$Diagram$Point, q3x, q3y),
-							_2: _user$project$Diagram$arcRadius * 2,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, qy),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 2,
 							_3: false
 						}),
-						_user$project$Diagram$Line(
+						_ivanceras$svgbob$Diagram$Line(
 						{
 							ctor: '_Tuple2',
-							_0: A2(_user$project$Diagram$Point, q3x, q3y),
-							_1: A2(_user$project$Diagram$Point, ex, ey)
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, q3y)
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$Left, _user$project$Diagram$Mid, _user$project$Diagram$Quarter),
+				_0: A3(
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
+					_elm_lang$core$Native_List.fromArray(
+						[_ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Smooth),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy)
+						}),
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, ex, sy),
-							_1: A2(_user$project$Diagram$Point, ex, ey),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, qy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 2,
+							_3: false
+						}),
+						_ivanceras$svgbob$Diagram$Line(
+						{
+							ctor: '_Tuple2',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, q3y),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey)
+						})
+					])
+			},
+				{
+				ctor: '_Tuple2',
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Quarter),
+				_1: _elm_lang$core$Native_List.fromArray(
+					[
+						_ivanceras$svgbob$Diagram$Arc(
+						{
+							ctor: '_Tuple4',
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, ey),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$Right, _user$project$Diagram$Mid, _user$project$Diagram$Quarter),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Quarter),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, sx, ey),
-							_1: A2(_user$project$Diagram$Point, sx, sy),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, ey),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx, sy),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$Top, _user$project$Diagram$Mid, _user$project$Diagram$Half),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, ex, my),
-							_1: A2(_user$project$Diagram$Point, sx, my),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$Left, _user$project$Diagram$Mid, _user$project$Diagram$Half),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Left, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, q3x, sy),
-							_1: A2(_user$project$Diagram$Point, q3x, ey),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, q3x, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, q3x, ey),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$Right, _user$project$Diagram$Mid, _user$project$Diagram$Half),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Right, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, qx, sy),
-							_1: A2(_user$project$Diagram$Point, qx, ey),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, qx, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, qx, ey),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: true
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$Bottom, _user$project$Diagram$Mid, _user$project$Diagram$Half),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex, my),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$TopLeft, _user$project$Diagram$Mid, _user$project$Diagram$Half),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, ex, my),
-							_1: A2(_user$project$Diagram$Point, sx - tw4, ey),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, sx - tw4, ey),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$TopRight, _user$project$Diagram$Mid, _user$project$Diagram$Half),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex + tw4, ey),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex + tw4, ey),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: true
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$BottomLeft, _user$project$Diagram$Mid, _user$project$Diagram$Half),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$BottomLeft, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, sx - tw4, sy),
-							_1: A2(_user$project$Diagram$Point, ex, my),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx - tw4, sy),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex, my),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						})
 					])
 			},
 				{
 				ctor: '_Tuple2',
-				_0: A3(_user$project$Diagram$Curve, _user$project$Diagram$BottomRight, _user$project$Diagram$Mid, _user$project$Diagram$Half),
+				_0: A3(_ivanceras$svgbob$Diagram$Curve, _ivanceras$svgbob$Diagram$BottomRight, _ivanceras$svgbob$Diagram$Mid, _ivanceras$svgbob$Diagram$Half),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$Arc(
+						_ivanceras$svgbob$Diagram$Arc(
 						{
 							ctor: '_Tuple4',
-							_0: A2(_user$project$Diagram$Point, sx, my),
-							_1: A2(_user$project$Diagram$Point, ex + tw4, sy),
-							_2: _user$project$Diagram$arcRadius * 4,
+							_0: A2(_ivanceras$svgbob$Diagram$Point, sx, my),
+							_1: A2(_ivanceras$svgbob$Diagram$Point, ex + tw4, sy),
+							_2: _ivanceras$svgbob$Diagram$arcRadius * 4,
 							_3: false
 						})
 					])
@@ -11415,17 +11487,17 @@ var _user$project$Diagram$componentPathList = F2(
 				{
 				ctor: '_Tuple2',
 				_0: A3(
-					_user$project$Diagram$Junction,
-					_user$project$Diagram$Mid,
+					_ivanceras$svgbob$Diagram$Junction,
+					_ivanceras$svgbob$Diagram$Mid,
 					_elm_lang$core$Native_List.fromArray(
-						[_user$project$Diagram$Top, _user$project$Diagram$Bottom, _user$project$Diagram$TopLeft, _user$project$Diagram$TopRight, _user$project$Diagram$BottomLeft, _user$project$Diagram$BottomRight]),
-					_user$project$Diagram$Sharp),
+						[_ivanceras$svgbob$Diagram$Top, _ivanceras$svgbob$Diagram$Bottom, _ivanceras$svgbob$Diagram$TopLeft, _ivanceras$svgbob$Diagram$TopRight, _ivanceras$svgbob$Diagram$BottomLeft, _ivanceras$svgbob$Diagram$BottomRight]),
+					_ivanceras$svgbob$Diagram$Sharp),
 				_1: _elm_lang$core$Native_List.fromArray(
 					[verticalPath, slantLeftPath, slantRightPath])
 			}
 			]);
 	});
-var _user$project$Diagram$getComponentPaths = F4(
+var _ivanceras$svgbob$Diagram$getComponentPaths = F4(
 	function (x, y, component, model) {
 		var path = _elm_lang$core$List$head(
 			A2(
@@ -11434,23 +11506,23 @@ var _user$project$Diagram$getComponentPaths = F4(
 					var _p38 = _p37;
 					return _elm_lang$core$Native_Utils.eq(component, _p38._0) ? _elm_lang$core$Maybe$Just(_p38._1) : _elm_lang$core$Maybe$Nothing;
 				},
-				A2(_user$project$Diagram$componentPathList, x, y)));
-		var $char = A3(_user$project$Diagram$get, x, y, model);
+				A2(_ivanceras$svgbob$Diagram$componentPathList, x, y)));
+		var $char = A3(_ivanceras$svgbob$Diagram$get, x, y, model);
 		var _p39 = path;
 		if (_p39.ctor === 'Just') {
 			return _p39._0;
 		} else {
-			if (A2(_user$project$Diagram$isChar, $char, _user$project$Diagram$isNotSpace)) {
+			if (A2(_ivanceras$svgbob$Diagram$isChar, $char, _ivanceras$svgbob$Diagram$isNotSpace)) {
 				var _p40 = A2(_elm_lang$core$Debug$log, 'Matching component to char', $char);
 				return _elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Diagram$TextPath(
+						_ivanceras$svgbob$Diagram$TextPath(
 						{
 							ctor: '_Tuple2',
 							_0: A2(
-								_user$project$Diagram$Point,
-								_user$project$Diagram$measureX(x) + (_user$project$Diagram$textWidth / 4),
-								_user$project$Diagram$measureY(y) + ((_user$project$Diagram$textHeight * 3) / 4)),
+								_ivanceras$svgbob$Diagram$Point,
+								_ivanceras$svgbob$Diagram$measureX(x) + (_ivanceras$svgbob$Diagram$textWidth / 4),
+								_ivanceras$svgbob$Diagram$measureY(y) + ((_ivanceras$svgbob$Diagram$textHeight * 3) / 4)),
 							_1: _elm_lang$core$String$fromChar(
 								A2(
 									_elm_lang$core$Maybe$withDefault,
@@ -11464,14 +11536,14 @@ var _user$project$Diagram$getComponentPaths = F4(
 			}
 		}
 	});
-var _user$project$Diagram$firstPathOnly = F4(
+var _ivanceras$svgbob$Diagram$firstPathOnly = F4(
 	function (x, y, comp, model) {
-		var paths = A4(_user$project$Diagram$getComponentPaths, x, y, comp, model);
+		var paths = A4(_ivanceras$svgbob$Diagram$getComponentPaths, x, y, comp, model);
 		return _elm_lang$core$Native_Utils.eq(
 			_elm_lang$core$List$length(paths),
 			1) ? _elm_lang$core$List$head(paths) : _elm_lang$core$Maybe$Nothing;
 	});
-var _user$project$Diagram$eat = F2(
+var _ivanceras$svgbob$Diagram$eat = F2(
 	function (path1, path2) {
 		var _p41 = path1;
 		_v29_2:
@@ -11484,8 +11556,8 @@ var _user$project$Diagram$eat = F2(
 						var _p42 = path2;
 						if ((_p42.ctor === 'Line') && (_p42._0.ctor === '_Tuple2')) {
 							var _p43 = _p42._0._1;
-							return (_elm_lang$core$Native_Utils.eq(_p44, _p42._0._0) && A3(_user$project$Diagram$collinear, _p45, _p44, _p43)) ? _elm_lang$core$Maybe$Just(
-								_user$project$Diagram$Line(
+							return (_elm_lang$core$Native_Utils.eq(_p44, _p42._0._0) && A3(_ivanceras$svgbob$Diagram$collinear, _p45, _p44, _p43)) ? _elm_lang$core$Maybe$Just(
+								_ivanceras$svgbob$Diagram$Line(
 									{ctor: '_Tuple2', _0: _p45, _1: _p43})) : _elm_lang$core$Maybe$Nothing;
 						} else {
 							return _elm_lang$core$Maybe$Nothing;
@@ -11500,8 +11572,8 @@ var _user$project$Diagram$eat = F2(
 						var _p46 = path2;
 						if ((_p46.ctor === 'DashedLine') && (_p46._0.ctor === '_Tuple2')) {
 							var _p47 = _p46._0._1;
-							return (_elm_lang$core$Native_Utils.eq(_p48, _p46._0._0) && A3(_user$project$Diagram$collinear, _p49, _p48, _p47)) ? _elm_lang$core$Maybe$Just(
-								_user$project$Diagram$DashedLine(
+							return (_elm_lang$core$Native_Utils.eq(_p48, _p46._0._0) && A3(_ivanceras$svgbob$Diagram$collinear, _p49, _p48, _p47)) ? _elm_lang$core$Maybe$Just(
+								_ivanceras$svgbob$Diagram$DashedLine(
 									{ctor: '_Tuple2', _0: _p49, _1: _p47})) : _elm_lang$core$Maybe$Nothing;
 						} else {
 							return _elm_lang$core$Maybe$Nothing;
@@ -11515,17 +11587,17 @@ var _user$project$Diagram$eat = F2(
 		} while(false);
 		return _elm_lang$core$Maybe$Nothing;
 	});
-var _user$project$Diagram$reversePath = function (path) {
+var _ivanceras$svgbob$Diagram$reversePath = function (path) {
 	var _p50 = path;
 	switch (_p50.ctor) {
 		case 'Line':
-			return _user$project$Diagram$Line(
+			return _ivanceras$svgbob$Diagram$Line(
 				{ctor: '_Tuple2', _0: _p50._0._1, _1: _p50._0._0});
 		case 'ArrowLine':
-			return _user$project$Diagram$ArrowLine(
+			return _ivanceras$svgbob$Diagram$ArrowLine(
 				{ctor: '_Tuple2', _0: _p50._0._1, _1: _p50._0._0});
 		case 'Arc':
-			return _user$project$Diagram$Arc(
+			return _ivanceras$svgbob$Diagram$Arc(
 				{
 					ctor: '_Tuple4',
 					_0: _p50._0._1,
@@ -11534,23 +11606,23 @@ var _user$project$Diagram$reversePath = function (path) {
 					_3: _elm_lang$core$Basics$not(_p50._0._3)
 				});
 		case 'DashedLine':
-			return _user$project$Diagram$DashedLine(
+			return _ivanceras$svgbob$Diagram$DashedLine(
 				{ctor: '_Tuple2', _0: _p50._0._1, _1: _p50._0._0});
 		default:
-			return _user$project$Diagram$TextPath(
+			return _ivanceras$svgbob$Diagram$TextPath(
 				{ctor: '_Tuple2', _0: _p50._0._0, _1: _p50._0._1});
 	}
 };
-var _user$project$Diagram$reduce = F2(
+var _ivanceras$svgbob$Diagram$reduce = F2(
 	function (path1, path2) {
-		var _p51 = A2(_user$project$Diagram$eat, path1, path2);
+		var _p51 = A2(_ivanceras$svgbob$Diagram$eat, path1, path2);
 		if (_p51.ctor === 'Just') {
 			return _elm_lang$core$Maybe$Just(_p51._0);
 		} else {
 			var _p52 = A2(
-				_user$project$Diagram$eat,
+				_ivanceras$svgbob$Diagram$eat,
 				path1,
-				_user$project$Diagram$reversePath(path2));
+				_ivanceras$svgbob$Diagram$reversePath(path2));
 			if (_p52.ctor === 'Just') {
 				return _elm_lang$core$Maybe$Just(_p52._0);
 			} else {
@@ -11558,7 +11630,7 @@ var _user$project$Diagram$reduce = F2(
 			}
 		}
 	});
-var _user$project$Diagram$tryReduce = F3(
+var _ivanceras$svgbob$Diagram$tryReduce = F3(
 	function (_p54, _p53, model) {
 		var _p55 = _p54;
 		var _p64 = _p55._1;
@@ -11566,20 +11638,20 @@ var _user$project$Diagram$tryReduce = F3(
 		var _p56 = _p53;
 		var _p62 = _p56._1;
 		var _p61 = _p56._0;
-		var comp2 = A3(_user$project$Diagram$matchComponent, _p61, _p62, model);
-		var comp1 = A3(_user$project$Diagram$matchComponent, _p63, _p64, model);
-		if (_user$project$Diagram$isReduceable(comp2)) {
+		var comp2 = A3(_ivanceras$svgbob$Diagram$matchComponent, _p61, _p62, model);
+		var comp1 = A3(_ivanceras$svgbob$Diagram$matchComponent, _p63, _p64, model);
+		if (_ivanceras$svgbob$Diagram$isReduceable(comp2)) {
 			var _p57 = comp1;
 			if (_p57.ctor === 'Just') {
 				var _p58 = comp2;
 				if (_p58.ctor === 'Just') {
-					var path2 = A4(_user$project$Diagram$firstPathOnly, _p61, _p62, _p58._0, model);
-					var path1 = A4(_user$project$Diagram$firstPathOnly, _p63, _p64, _p57._0, model);
+					var path2 = A4(_ivanceras$svgbob$Diagram$firstPathOnly, _p61, _p62, _p58._0, model);
+					var path1 = A4(_ivanceras$svgbob$Diagram$firstPathOnly, _p63, _p64, _p57._0, model);
 					var _p59 = path1;
 					if (_p59.ctor === 'Just') {
 						var _p60 = path2;
 						if (_p60.ctor === 'Just') {
-							return A2(_user$project$Diagram$reduce, _p59._0, _p60._0);
+							return A2(_ivanceras$svgbob$Diagram$reduce, _p59._0, _p60._0);
 						} else {
 							return _elm_lang$core$Maybe$Nothing;
 						}
@@ -11596,12 +11668,12 @@ var _user$project$Diagram$tryReduce = F3(
 			return _elm_lang$core$Maybe$Nothing;
 		}
 	});
-var _user$project$Diagram$canReduce = F3(
+var _ivanceras$svgbob$Diagram$canReduce = F3(
 	function (_p66, _p65, model) {
 		var _p67 = _p66;
 		var _p68 = _p65;
 		var _p69 = A3(
-			_user$project$Diagram$tryReduce,
+			_ivanceras$svgbob$Diagram$tryReduce,
 			{ctor: '_Tuple2', _0: _p67._0, _1: _p67._1},
 			{ctor: '_Tuple2', _0: _p68._0, _1: _p68._1},
 			model);
@@ -11611,7 +11683,7 @@ var _user$project$Diagram$canReduce = F3(
 			return false;
 		}
 	});
-var _user$project$Diagram$isEdible = F3(
+var _ivanceras$svgbob$Diagram$isEdible = F3(
 	function (x, y, model) {
 		var bottomLeft = {ctor: '_Tuple2', _0: x - 1, _1: y + 1};
 		var topLeft = {ctor: '_Tuple2', _0: x - 1, _1: y - 1};
@@ -11621,10 +11693,10 @@ var _user$project$Diagram$isEdible = F3(
 		var center = {ctor: '_Tuple2', _0: x, _1: y};
 		var match = _elm_lang$core$Native_List.fromArray(
 			[
-				A3(_user$project$Diagram$canReduce, top, center, model),
-				A3(_user$project$Diagram$canReduce, left, center, model),
-				A3(_user$project$Diagram$canReduce, topLeft, center, model),
-				A3(_user$project$Diagram$canReduce, bottomLeft, center, model)
+				A3(_ivanceras$svgbob$Diagram$canReduce, top, center, model),
+				A3(_ivanceras$svgbob$Diagram$canReduce, left, center, model),
+				A3(_ivanceras$svgbob$Diagram$canReduce, topLeft, center, model),
+				A3(_ivanceras$svgbob$Diagram$canReduce, bottomLeft, center, model)
 			]);
 		return A2(
 			_elm_lang$core$List$any,
@@ -11633,16 +11705,16 @@ var _user$project$Diagram$isEdible = F3(
 			},
 			match);
 	});
-var _user$project$Diagram$reduceTo = F3(
+var _ivanceras$svgbob$Diagram$reduceTo = F3(
 	function (path, _p70, model) {
 		var _p71 = _p70;
 		var _p75 = _p71._1;
 		var _p74 = _p71._0;
-		var _p72 = A3(_user$project$Diagram$matchComponent, _p74, _p75, model);
+		var _p72 = A3(_ivanceras$svgbob$Diagram$matchComponent, _p74, _p75, model);
 		if (_p72.ctor === 'Just') {
-			var _p73 = A4(_user$project$Diagram$firstPathOnly, _p74, _p75, _p72._0, model);
+			var _p73 = A4(_ivanceras$svgbob$Diagram$firstPathOnly, _p74, _p75, _p72._0, model);
 			if (_p73.ctor === 'Just') {
-				return A2(_user$project$Diagram$reduce, path, _p73._0);
+				return A2(_ivanceras$svgbob$Diagram$reduce, path, _p73._0);
 			} else {
 				return _elm_lang$core$Maybe$Nothing;
 			}
@@ -11650,7 +11722,7 @@ var _user$project$Diagram$reduceTo = F3(
 			return _elm_lang$core$Maybe$Nothing;
 		}
 	});
-var _user$project$Diagram$traceEatEdiblePaths = F3(
+var _ivanceras$svgbob$Diagram$traceEatEdiblePaths = F3(
 	function (path, _p76, model) {
 		traceEatEdiblePaths:
 		while (true) {
@@ -11665,7 +11737,7 @@ var _user$project$Diagram$traceEatEdiblePaths = F3(
 			var left = {ctor: '_Tuple2', _0: _p82 - 1, _1: _p83};
 			var bottom = {ctor: '_Tuple2', _0: _p82, _1: _p83 + 1};
 			var top = {ctor: '_Tuple2', _0: _p82, _1: _p83 - 1};
-			var _p78 = A3(_user$project$Diagram$reduceTo, path, right, model);
+			var _p78 = A3(_ivanceras$svgbob$Diagram$reduceTo, path, right, model);
 			if (_p78.ctor === 'Just') {
 				var _v49 = _p78._0,
 					_v50 = right,
@@ -11675,7 +11747,7 @@ var _user$project$Diagram$traceEatEdiblePaths = F3(
 				model = _v51;
 				continue traceEatEdiblePaths;
 			} else {
-				var _p79 = A3(_user$project$Diagram$reduceTo, path, bottom, model);
+				var _p79 = A3(_ivanceras$svgbob$Diagram$reduceTo, path, bottom, model);
 				if (_p79.ctor === 'Just') {
 					var _v53 = _p79._0,
 						_v54 = bottom,
@@ -11685,7 +11757,7 @@ var _user$project$Diagram$traceEatEdiblePaths = F3(
 					model = _v55;
 					continue traceEatEdiblePaths;
 				} else {
-					var _p80 = A3(_user$project$Diagram$reduceTo, path, bottomRight, model);
+					var _p80 = A3(_ivanceras$svgbob$Diagram$reduceTo, path, bottomRight, model);
 					if (_p80.ctor === 'Just') {
 						var _v57 = _p80._0,
 							_v58 = bottomRight,
@@ -11695,7 +11767,7 @@ var _user$project$Diagram$traceEatEdiblePaths = F3(
 						model = _v59;
 						continue traceEatEdiblePaths;
 					} else {
-						var _p81 = A3(_user$project$Diagram$reduceTo, path, topRight, model);
+						var _p81 = A3(_ivanceras$svgbob$Diagram$reduceTo, path, topRight, model);
 						if (_p81.ctor === 'Just') {
 							var _v61 = _p81._0,
 								_v62 = topRight,
@@ -11712,20 +11784,20 @@ var _user$project$Diagram$traceEatEdiblePaths = F3(
 			}
 		}
 	});
-var _user$project$Diagram$getOptimizedPath = F3(
+var _ivanceras$svgbob$Diagram$getOptimizedPath = F3(
 	function (x, y, model) {
-		var center = A3(_user$project$Diagram$matchComponent, x, y, model);
+		var center = A3(_ivanceras$svgbob$Diagram$matchComponent, x, y, model);
 		var _p84 = center;
 		if (_p84.ctor === 'Just') {
 			var _p87 = _p84._0;
-			if (A3(_user$project$Diagram$isEdible, x, y, model)) {
+			if (A3(_ivanceras$svgbob$Diagram$isEdible, x, y, model)) {
 				return _elm_lang$core$Native_List.fromArray(
 					[]);
 			} else {
-				var _p85 = A4(_user$project$Diagram$firstPathOnly, x, y, _p87, model);
+				var _p85 = A4(_ivanceras$svgbob$Diagram$firstPathOnly, x, y, _p87, model);
 				if (_p85.ctor === 'Just') {
 					var _p86 = A3(
-						_user$project$Diagram$traceEatEdiblePaths,
+						_ivanceras$svgbob$Diagram$traceEatEdiblePaths,
 						_p85._0,
 						{ctor: '_Tuple2', _0: x, _1: y},
 						model);
@@ -11737,7 +11809,7 @@ var _user$project$Diagram$getOptimizedPath = F3(
 							[]);
 					}
 				} else {
-					return A4(_user$project$Diagram$getComponentPaths, x, y, _p87, model);
+					return A4(_ivanceras$svgbob$Diagram$getComponentPaths, x, y, _p87, model);
 				}
 			}
 		} else {
@@ -11745,18 +11817,18 @@ var _user$project$Diagram$getOptimizedPath = F3(
 				[]);
 		}
 	});
-var _user$project$Diagram$componentPaths = F3(
+var _ivanceras$svgbob$Diagram$componentPaths = F3(
 	function (x, y, model) {
-		var _p88 = A3(_user$project$Diagram$matchComponent, x, y, model);
+		var _p88 = A3(_ivanceras$svgbob$Diagram$matchComponent, x, y, model);
 		if (_p88.ctor === 'Just') {
-			var paths = _user$project$Diagram$optimizeSvg ? A3(_user$project$Diagram$getOptimizedPath, x, y, model) : A4(_user$project$Diagram$getComponentPaths, x, y, _p88._0, model);
+			var paths = _ivanceras$svgbob$Diagram$optimizeSvg ? A3(_ivanceras$svgbob$Diagram$getOptimizedPath, x, y, model) : A4(_ivanceras$svgbob$Diagram$getComponentPaths, x, y, _p88._0, model);
 			return paths;
 		} else {
 			return _elm_lang$core$Native_List.fromArray(
 				[]);
 		}
 	});
-var _user$project$Diagram$expandedPaths = function (model) {
+var _ivanceras$svgbob$Diagram$expandedPaths = function (model) {
 	return _elm_lang$core$List$concat(
 		_elm_lang$core$List$concat(
 			_elm_lang$core$Array$toList(
@@ -11769,19 +11841,19 @@ var _user$project$Diagram$expandedPaths = function (model) {
 									_elm_lang$core$Array$indexedMap,
 									F2(
 										function (x, $char) {
-											return A3(_user$project$Diagram$componentPaths, x, y, model);
+											return A3(_ivanceras$svgbob$Diagram$componentPaths, x, y, model);
 										}),
 									line));
 						}),
 					model.lines))));
 };
-var _user$project$Diagram$componentPathDefs = F3(
+var _ivanceras$svgbob$Diagram$componentPathDefs = F3(
 	function (x, y, model) {
-		var pathList = A3(_user$project$Diagram$componentPaths, x, y, model);
+		var pathList = A3(_ivanceras$svgbob$Diagram$componentPaths, x, y, model);
 		return _elm_lang$core$List$isEmpty(pathList) ? _elm_lang$core$Maybe$Nothing : _elm_lang$core$Maybe$Just(
-			_user$project$Diagram$toPathDefs(pathList));
+			_ivanceras$svgbob$Diagram$toPathDefs(pathList));
 	});
-var _user$project$Diagram$perComponentPathDefs = function (model) {
+var _ivanceras$svgbob$Diagram$perComponentPathDefs = function (model) {
 	return A2(
 		_elm_lang$core$List$filterMap,
 		function (a) {
@@ -11798,15 +11870,15 @@ var _user$project$Diagram$perComponentPathDefs = function (model) {
 									_elm_lang$core$Array$indexedMap,
 									F2(
 										function (x, $char) {
-											return A3(_user$project$Diagram$componentPathDefs, x, y, model);
+											return A3(_ivanceras$svgbob$Diagram$componentPathDefs, x, y, model);
 										}),
 									line));
 						}),
 					model.lines))));
 };
-var _user$project$Diagram$allPathDefs = function (model) {
+var _ivanceras$svgbob$Diagram$allPathDefs = function (model) {
 	var _p89 = _elm_lang$core$List$unzip(
-		_user$project$Diagram$perComponentPathDefs(model));
+		_ivanceras$svgbob$Diagram$perComponentPathDefs(model));
 	var pathDefs = _p89._0;
 	var unmerged = _p89._1;
 	return {
@@ -11815,42 +11887,42 @@ var _user$project$Diagram$allPathDefs = function (model) {
 		_1: _elm_lang$core$List$concat(unmerged)
 	};
 };
-var _user$project$Diagram$None = {ctor: 'None'};
-var _user$project$Diagram$Arrowed = {ctor: 'Arrowed'};
-var _user$project$Diagram$svgPath = function (path) {
+var _ivanceras$svgbob$Diagram$None = {ctor: 'None'};
+var _ivanceras$svgbob$Diagram$Arrowed = {ctor: 'Arrowed'};
+var _ivanceras$svgbob$Diagram$svgPath = function (path) {
 	var _p90 = path;
 	switch (_p90.ctor) {
 		case 'Line':
-			return A4(_user$project$Diagram$drawPathLine, _p90._0._0, _p90._0._1, _user$project$Diagram$Solid, _user$project$Diagram$None);
+			return A4(_ivanceras$svgbob$Diagram$drawPathLine, _p90._0._0, _p90._0._1, _ivanceras$svgbob$Diagram$Solid, _ivanceras$svgbob$Diagram$None);
 		case 'ArrowLine':
-			return A4(_user$project$Diagram$drawPathLine, _p90._0._0, _p90._0._1, _user$project$Diagram$Solid, _user$project$Diagram$Arrowed);
+			return A4(_ivanceras$svgbob$Diagram$drawPathLine, _p90._0._0, _p90._0._1, _ivanceras$svgbob$Diagram$Solid, _ivanceras$svgbob$Diagram$Arrowed);
 		case 'Arc':
-			return A4(_user$project$Diagram$drawArc, _p90._0._0, _p90._0._1, _p90._0._2, _p90._0._3);
+			return A4(_ivanceras$svgbob$Diagram$drawArc, _p90._0._0, _p90._0._1, _p90._0._2, _p90._0._3);
 		case 'DashedLine':
-			return A4(_user$project$Diagram$drawPathLine, _p90._0._0, _p90._0._1, _user$project$Diagram$Dashed, _user$project$Diagram$None);
+			return A4(_ivanceras$svgbob$Diagram$drawPathLine, _p90._0._0, _p90._0._1, _ivanceras$svgbob$Diagram$Dashed, _ivanceras$svgbob$Diagram$None);
 		default:
-			return A2(_user$project$Diagram$drawText, _p90._0._0, _p90._0._1);
+			return A2(_ivanceras$svgbob$Diagram$drawText, _p90._0._0, _p90._0._1);
 	}
 };
-var _user$project$Diagram$getSvg = function (model) {
+var _ivanceras$svgbob$Diagram$getSvg = function (model) {
 	var svgPaths = function () {
-		var _p91 = _user$project$Diagram$density;
+		var _p91 = _ivanceras$svgbob$Diagram$density;
 		switch (_p91.ctor) {
 			case 'Compact':
-				var _p92 = _user$project$Diagram$allPathDefs(model);
+				var _p92 = _ivanceras$svgbob$Diagram$allPathDefs(model);
 				var pathDefs = _p92._0;
 				var unmerged = _p92._1;
-				var onePath = A3(_user$project$Diagram$drawPathDef, pathDefs, _user$project$Diagram$Solid, _user$project$Diagram$None);
+				var onePath = A3(_ivanceras$svgbob$Diagram$drawPathDef, pathDefs, _ivanceras$svgbob$Diagram$Solid, _ivanceras$svgbob$Diagram$None);
 				var unmergedPaths = A2(
 					_elm_lang$core$List$map,
 					function (um) {
-						return _user$project$Diagram$svgPath(um);
+						return _ivanceras$svgbob$Diagram$svgPath(um);
 					},
 					unmerged);
 				return A2(_elm_lang$core$List_ops['::'], onePath, unmergedPaths);
 			case 'Medium':
 				var _p93 = _elm_lang$core$List$unzip(
-					_user$project$Diagram$perComponentPathDefs(model));
+					_ivanceras$svgbob$Diagram$perComponentPathDefs(model));
 				var pathDefs = _p93._0;
 				var unmerged = _p93._1;
 				var svgPathDefs = A2(
@@ -11862,13 +11934,13 @@ var _user$project$Diagram$getSvg = function (model) {
 						_elm_lang$core$List$map,
 						function (defs) {
 							return _elm_lang$core$String$isEmpty(defs) ? _elm_lang$core$Maybe$Nothing : _elm_lang$core$Maybe$Just(
-								A3(_user$project$Diagram$drawPathDef, defs, _user$project$Diagram$Solid, _user$project$Diagram$None));
+								A3(_ivanceras$svgbob$Diagram$drawPathDef, defs, _ivanceras$svgbob$Diagram$Solid, _ivanceras$svgbob$Diagram$None));
 						},
 						pathDefs));
 				var unmergedPaths = A2(
 					_elm_lang$core$List$map,
 					function (um) {
-						return _user$project$Diagram$svgPath(um);
+						return _ivanceras$svgbob$Diagram$svgPath(um);
 					},
 					_elm_lang$core$List$concat(unmerged));
 				return A2(_elm_lang$core$Basics_ops['++'], svgPathDefs, unmergedPaths);
@@ -11876,15 +11948,15 @@ var _user$project$Diagram$getSvg = function (model) {
 				return A2(
 					_elm_lang$core$List$map,
 					function (path) {
-						return _user$project$Diagram$svgPath(path);
+						return _ivanceras$svgbob$Diagram$svgPath(path);
 					},
-					_user$project$Diagram$expandedPaths(model));
+					_ivanceras$svgbob$Diagram$expandedPaths(model));
 		}
 	}();
 	var gheight = _elm_lang$core$Basics$toString(
-		_user$project$Diagram$measureY(model.rows));
+		_ivanceras$svgbob$Diagram$measureY(model.rows));
 	var gwidth = _elm_lang$core$Basics$toString(
-		_user$project$Diagram$measureX(model.columns));
+		_ivanceras$svgbob$Diagram$measureX(model.columns));
 	return A2(
 		_elm_lang$svg$Svg$svg,
 		_elm_lang$core$Native_List.fromArray(
@@ -11897,13 +11969,13 @@ var _user$project$Diagram$getSvg = function (model) {
 					'font-size:',
 					A2(
 						_elm_lang$core$Basics_ops['++'],
-						_elm_lang$core$Basics$toString(_user$project$Diagram$fontSize),
+						_elm_lang$core$Basics$toString(_ivanceras$svgbob$Diagram$fontSize),
 						'px;font-family:monospace')))
 			]),
 		_elm_lang$core$List$concat(
 			_elm_lang$core$Native_List.fromArray(
 				[
-					_user$project$Diagram$gridOn ? _user$project$Diagram$gridFill : _elm_lang$core$Native_List.fromArray(
+					_ivanceras$svgbob$Diagram$gridOn ? _ivanceras$svgbob$Diagram$gridFill : _elm_lang$core$Native_List.fromArray(
 					[]),
 					_elm_lang$core$Native_List.fromArray(
 					[
@@ -11912,31 +11984,35 @@ var _user$project$Diagram$getSvg = function (model) {
 						_elm_lang$core$Native_List.fromArray(
 							[]),
 						_elm_lang$core$Native_List.fromArray(
-							[_user$project$Diagram$arrowMarker]))
+							[_ivanceras$svgbob$Diagram$arrowMarker]))
 					]),
 					svgPaths
 				])));
 };
+var _ivanceras$svgbob$Diagram$toSvg = function (input) {
+	return _ivanceras$svgbob$Diagram$getSvg(
+		_ivanceras$svgbob$Diagram$init(input));
+};
 
-var _user$project$Main$arg = '\n\n+------+   +-----+   +-----+   +-----+\n|      |   |     |   |     |   |     |\n| Foo  +-->| Bar +---+ Baz |<--+ Moo |\n|      |   |     |   |     |   |     |\n+------+   +-----+   +--+--+   +-----+\n              ^         |\n              |         V\n.-------------+-----------------------.\n| Hello here and there and everywhere |\n\'-------------------------------------\'\n\n\n                        ____________\n   .--------------.     \\           \\\n  / a == b         \\     \\           \\     __________\n (    &&            )     ) process   )    \\         \\\n  \\ \'string\' ne \'\' /     /           /     / process /\n   \'--------------\'     /___________/     /_________/\n\n\n    __________________\n    \\                 \\\n     \\                 \\\n      . another process .\n     /                 /\n    /_________________/\n\n  User code  ^               ^ OS code\n              \\             /\n               \\        .--\'\n                \\      /\n  User code  <--- Mode ----> OS code\n                /      \\\n            .--\'        \\___\n           /                \\\n          v                  v \n       User code            OS code\n\n             .---.  .---. .---.  .---.    .---.  .---.\n    OS API   \'---\'  \'---\' \'---\'  \'---\'    \'---\'  \'---\'\n               |      |     |      |        |      |\n               v      v     |      v        |      v\n             .------------. | .-----------. |  .-----.\n             | Filesystem | | | Scheduler | |  | MMU |\n             \'------------\' | \'-----------\' |  \'-----\'\n                    |       |      |        |\n                    v       |      |        v\n                 .----.     |      |    .---------.\n                 | IO |<----\'      |    | Network |\n                 \'----\'            |    \'---------\'\n                    |              |         |\n                    v              v         v\n             .---------------------------------------.\n             |                  HAL                  |\n             \'---------------------------------------\'\n             \n\n   ____[]\n  | ___ |\n  ||   ||  device\n  ||___||  loads\n  | ooo |----------------------------------------------------------.\n  | ooo |    |                          |                          |\n  | ooo |    |                          |                          |\n  \'_____\'    |                          |                          |\n             |                          |                          |\n             v                          v                          v\n   .-------------------.  .---------------------------.  .-------------------.\n   | Loadable module C |  |     Loadable module A     |  | Loadable module B |\n   \'-------------------\'  |---------------------------|  |   (instrumented)  |\n             |            |         .-----.           |  \'-------------------\'\n             \'------------+-------->| A.o |           |             |\n                 calls    |         \'-----\'           |             |\n                          |    .------------------.   |             |\n                          |   / A.instrumented.o /<---+-------------\'\n                          |  \'------------------\'     |    calls\n                          \'---------------------------\'   \n\n\n                                        .--> Base::Class::Derived_A\n                                       /\n                                      .----> Base::Class::Derived_B    \n      Something -------.             /         \\\n                        \\           /           .---> Base::Class::Derived\n      Something::else    \\         /             \\\n            \\             \\       /               \'--> Base::Class::Derived\n             \\             \\     /\n              \\             \\   .-----------> Base::Class::Derived_C \n               \\             \\ /\n                \'------ Base::Class\n                       /  \\ \\ \\\n                      \'    \\ \\ \\  \n                      |     \\ \\ \\\n                      .      \\ \\ \'--- The::Latest\n                     /|       \\ \\      \\\n With::Some::fantasy  \'        \\ \\      \'---- The::Latest::Greatest\n                     /|         \\ \\\n         More::Stuff  \'          \\ \'- I::Am::Running::Out::Of::Ideas\n                     /|           \\\n         More::Stuff  \'            \\\n                     /              \'--- Last::One\n       More::Stuff  V \n\n  Safety\n    ^\n    |                       *Rust\n    |           *Java\n    | *Python\n    |                        *C++\n    +-----------------------------> Control\n\n    ^\n    :\n    :\n    :\n    :\n    +==============================>\n    \n    ..............................\n\n\n\n  TODO:\n        \n      ^ ^ ^\n       \\|/\n        . \n       /|\\\n      v V v \n\n      ^ ^ ^\n       \\|/\n      <-.->\n       /|\\\n      v V v \n\n        |   \\/   \n       -+-  /\\      \n        |   \n        \n        |      |    |      |\n        +--  --+    +--  --+   +--  --+\n                    |      |   |      |\n\n                     |    |  |     |\n             .- -.   .-  -.  ._   _.\n             |   |\n\n        .-   -.  .-.       \n        \'-   -\'  | |  | |  \n                      \'-\'\n\n      \\      |    /  |\n       .     \'   \'   .\n       |    /    |    \\ \n\n        \\    / \n         .  .\n        /    \\\n\n       .    .\n      /|    |\\\n\n      \n      \\|   |/\n       \'   \'\n\n       \\\n       /\n\n       /\n       \\\n\n\n       /      \\\n      \'--    --\'\n     /          \\\n\n       /   \\\n    --\'     \'--\n     /       \\\n\n                       \\         /\n       --.--  --.--   --.--   --.--\n        /        \\     \n\n\n        |   |\n        .   .\n       /|   |\\ \n\n        |\n        .\n       / \\\n\n       \\|/\n        .\n       /|\\\n\n       \n       \\|/\n      --.--\n       /|\\\n\n       \\|/\n      --+--\n       /|\\\n        \n        |/  \\|\n        .    .\n        |    |\n\n\n       -.  -.\n       /     \\\n\n        .-  .-\n       /     \\\n\n      \n       /   /     \\    \\\n      \'-  \'_     _\'   -\'\n       \n\n       .-.\n      (   )\n       \'-\'\n\n       ..\n      (  )\n       \'\'\n\n\n       .------.\n      (        )\n       \'------\'\n\n        ________  \n       /       /\n      /       /\n     /_______/\n\n\n        ________  \n        \\       \\\n         \\       \\\n          \\_______\\\n\n       ________ \n      |________|\n\n\n       ________ \n      |        |\n      |________|\n\n      .-.\n      \'-\'\n\n        ________  \n        \\_______\\\n\n       /\\\n      /  \\\n     /____\\\n\n       /\\\n      /  \\\n     /    \\\n    \'------\'\n\n       ___\n      /   \\\n      \\___/\n\n      ______\n     /      \\\n    /        \\\n    \\        /\n     \\______/\n        \n\n        +---------+\n        |         |                        +--------------+\n        |   NFS   |--+                     |              |\n        |         |  |                 +-->|   CacheFS    |\n        +---------+  |   +----------+  |   |  /dev/hda5   |\n                     |   |          |  |   +--------------+\n        +---------+  +-->|          |  |\n        |         |      |          |--+\n        |   AFS   |----->| FS-Cache |\n        |         |      |          |--+\n        +---------+  +-->|          |  |\n                     |   |          |  |   +--------------+\n        +---------+  |   +----------+  |   |              |\n        |         |  |                 +-->|  CacheFiles  |\n        |  ISOFS  |--+                     |  /var/cache  |\n        |         |                        +--------------+\n        +---------+\n    ';
-var _user$project$Main$textContentDecoder = A2(
+var _ivanceras$svgbob$Main$arg = '\n\n+------+   +-----+   +-----+   +-----+\n|      |   |     |   |     |   |     |\n| Foo  +-->| Bar +---+ Baz |<--+ Moo |\n|      |   |     |   |     |   |     |\n+------+   +-----+   +--+--+   +-----+\n              ^         |\n              |         V\n.-------------+-----------------------.\n| Hello here and there and everywhere |\n\'-------------------------------------\'\n\n\n                        ____________\n   .--------------.     \\           \\\n  / a == b         \\     \\           \\     __________\n (    &&            )     ) process   )    \\         \\\n  \\ \'string\' ne \'\' /     /           /     / process /\n   \'--------------\'     /___________/     /_________/\n\n\n    __________________\n    \\                 \\\n     \\                 \\\n      . another process .\n     /                 /\n    /_________________/\n\n  User code  ^               ^ OS code\n              \\             /\n               \\        .--\'\n                \\      /\n  User code  <--- Mode ----> OS code\n                /      \\\n            .--\'        \\___\n           /                \\\n          v                  v \n       User code            OS code\n\n             .---.  .---. .---.  .---.    .---.  .---.\n    OS API   \'---\'  \'---\' \'---\'  \'---\'    \'---\'  \'---\'\n               |      |     |      |        |      |\n               v      v     |      v        |      v\n             .------------. | .-----------. |  .-----.\n             | Filesystem | | | Scheduler | |  | MMU |\n             \'------------\' | \'-----------\' |  \'-----\'\n                    |       |      |        |\n                    v       |      |        v\n                 .----.     |      |    .---------.\n                 | IO |<----\'      |    | Network |\n                 \'----\'            |    \'---------\'\n                    |              |         |\n                    v              v         v\n             .---------------------------------------.\n             |                  HAL                  |\n             \'---------------------------------------\'\n             \n\n   ____[]\n  | ___ |\n  ||   ||  device\n  ||___||  loads\n  | ooo |----------------------------------------------------------.\n  | ooo |    |                          |                          |\n  | ooo |    |                          |                          |\n  \'_____\'    |                          |                          |\n             |                          |                          |\n             v                          v                          v\n   .-------------------.  .---------------------------.  .-------------------.\n   | Loadable module C |  |     Loadable module A     |  | Loadable module B |\n   \'-------------------\'  |---------------------------|  |   (instrumented)  |\n             |            |         .-----.           |  \'-------------------\'\n             \'------------+-------->| A.o |           |             |\n                 calls    |         \'-----\'           |             |\n                          |    .------------------.   |             |\n                          |   / A.instrumented.o /<---+-------------\'\n                          |  \'------------------\'     |    calls\n                          \'---------------------------\'   \n\n\n                                        .--> Base::Class::Derived_A\n                                       /\n                                      .----> Base::Class::Derived_B    \n      Something -------.             /         \\\n                        \\           /           .---> Base::Class::Derived\n      Something::else    \\         /             \\\n            \\             \\       /               \'--> Base::Class::Derived\n             \\             \\     /\n              \\             \\   .-----------> Base::Class::Derived_C \n               \\             \\ /\n                \'------ Base::Class\n                       /  \\ \\ \\\n                      \'    \\ \\ \\  \n                      |     \\ \\ \\\n                      .      \\ \\ \'--- The::Latest\n                     /|       \\ \\      \\\n With::Some::fantasy  \'        \\ \\      \'---- The::Latest::Greatest\n                     /|         \\ \\\n         More::Stuff  \'          \\ \'- I::Am::Running::Out::Of::Ideas\n                     /|           \\\n         More::Stuff  \'            \\\n                     /              \'--- Last::One\n       More::Stuff  V \n\n  Safety\n    ^\n    |                       *Rust\n    |           *Java\n    | *Python\n    |                        *C++\n    +-----------------------------> Control\n\n    ^\n    :\n    :\n    :\n    :\n    +==============================>\n    \n    ..............................\n\n\n\n  TODO:\n        \n      ^ ^ ^\n       \\|/\n        . \n       /|\\\n      v V v \n\n      ^ ^ ^\n       \\|/\n      <-.->\n       /|\\\n      v V v \n\n        |   \\/   \n       -+-  /\\      \n        |   \n        \n        |      |    |      |\n        +--  --+    +--  --+   +--  --+\n                    |      |   |      |\n\n                     |    |  |     |\n             .- -.   .-  -.  ._   _.\n             |   |\n\n        .-   -.  .-.       \n        \'-   -\'  | |  | |  \n                      \'-\'\n\n      \\      |    /  |\n       .     \'   \'   .\n       |    /    |    \\ \n\n        \\    / \n         .  .\n        /    \\\n\n       .    .\n      /|    |\\\n\n      \n      \\|   |/\n       \'   \'\n\n       \\\n       /\n\n       /\n       \\\n\n\n       /      \\\n      \'--    --\'\n     /          \\\n\n       /   \\\n    --\'     \'--\n     /       \\\n\n                       \\         /\n       --.--  --.--   --.--   --.--\n        /        \\     \n\n\n        |   |\n        .   .\n       /|   |\\ \n\n        |\n        .\n       / \\\n\n       \\|/\n        .\n       /|\\\n\n       \n       \\|/\n      --.--\n       /|\\\n\n       \\|/\n      --+--\n       /|\\\n        \n        |/  \\|\n        .    .\n        |    |\n\n\n       -.  -.\n       /     \\\n\n        .-  .-\n       /     \\\n\n      \n       /   /     \\    \\\n      \'-  \'_     _\'   -\'\n       \n\n       .-.\n      (   )\n       \'-\'\n\n       ..\n      (  )\n       \'\'\n\n\n       .------.\n      (        )\n       \'------\'\n\n        ________  \n       /       /\n      /       /\n     /_______/\n\n\n        ________  \n        \\       \\\n         \\       \\\n          \\_______\\\n\n       ________ \n      |________|\n\n\n       ________ \n      |        |\n      |________|\n\n      .-.\n      \'-\'\n\n        ________  \n        \\_______\\\n\n       /\\\n      /  \\\n     /____\\\n\n       /\\\n      /  \\\n     /    \\\n    \'------\'\n\n       ___\n      /   \\\n      \\___/\n\n      ______\n     /      \\\n    /        \\\n    \\        /\n     \\______/\n        \n\n        +---------+\n        |         |                        +--------------+\n        |   NFS   |--+                     |              |\n        |         |  |                 +-->|   CacheFS    |\n        +---------+  |   +----------+  |   |  /dev/hda5   |\n                     |   |          |  |   +--------------+\n        +---------+  +-->|          |  |\n        |         |      |          |--+\n        |   AFS   |----->| FS-Cache |\n        |         |      |          |--+\n        +---------+  +-->|          |  |\n                     |   |          |  |   +--------------+\n        +---------+  |   +----------+  |   |              |\n        |         |  |                 +-->|  CacheFiles  |\n        |  ISOFS  |--+                     |  /var/cache  |\n        |         |                        +--------------+\n        +---------+\n    ';
+var _ivanceras$svgbob$Main$textContentDecoder = A2(
 	_elm_lang$core$Json_Decode$at,
 	_elm_lang$core$Native_List.fromArray(
 		['target', 'textContent']),
 	_elm_lang$core$Json_Decode$string);
-var _user$project$Main$getAsciiText = _elm_lang$core$Native_Platform.outgoingPort(
+var _ivanceras$svgbob$Main$getAsciiText = _elm_lang$core$Native_Platform.outgoingPort(
 	'getAsciiText',
 	function (v) {
 		return null;
 	});
-var _user$project$Main$update = F2(
+var _ivanceras$svgbob$Main$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		if (_p0.ctor === 'Convert') {
 			return {
 				ctor: '_Tuple2',
 				_0: model,
-				_1: _user$project$Main$getAsciiText(
+				_1: _ivanceras$svgbob$Main$getAsciiText(
 					{ctor: '_Tuple0'})
 			};
 		} else {
@@ -11944,35 +12020,31 @@ var _user$project$Main$update = F2(
 				ctor: '_Tuple2',
 				_0: _elm_lang$core$Native_Utils.update(
 					model,
-					{
-						grid: _user$project$Diagram$init(_p0._0)
-					}),
+					{input: _p0._0}),
 				_1: _elm_lang$core$Platform_Cmd$none
 			};
 		}
 	});
-var _user$project$Main$setAsciiText = _elm_lang$core$Native_Platform.outgoingPort(
+var _ivanceras$svgbob$Main$setAsciiText = _elm_lang$core$Native_Platform.outgoingPort(
 	'setAsciiText',
 	function (v) {
 		return v;
 	});
-var _user$project$Main$init = {
+var _ivanceras$svgbob$Main$init = {
 	ctor: '_Tuple2',
-	_0: {
-		grid: _user$project$Diagram$init(_user$project$Main$arg)
-	},
+	_0: {input: ''},
 	_1: _elm_lang$core$Platform_Cmd$batch(
 		_elm_lang$core$Native_List.fromArray(
 			[
-				_user$project$Main$setAsciiText(_user$project$Main$arg)
+				_ivanceras$svgbob$Main$setAsciiText(_ivanceras$svgbob$Main$arg)
 			]))
 };
-var _user$project$Main$receiveAsciiText = _elm_lang$core$Native_Platform.incomingPort('receiveAsciiText', _elm_lang$core$Json_Decode$string);
-var _user$project$Main$Model = function (a) {
-	return {grid: a};
+var _ivanceras$svgbob$Main$receiveAsciiText = _elm_lang$core$Native_Platform.incomingPort('receiveAsciiText', _elm_lang$core$Json_Decode$string);
+var _ivanceras$svgbob$Main$Model = function (a) {
+	return {input: a};
 };
-var _user$project$Main$Convert = {ctor: 'Convert'};
-var _user$project$Main$view = function (model) {
+var _ivanceras$svgbob$Main$Convert = {ctor: 'Convert'};
+var _ivanceras$svgbob$Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		_elm_lang$core$Native_List.fromArray(
@@ -11995,7 +12067,7 @@ var _user$project$Main$view = function (model) {
 						_elm_lang$html$Html$button,
 						_elm_lang$core$Native_List.fromArray(
 							[
-								_elm_lang$html$Html_Events$onClick(_user$project$Main$Convert)
+								_elm_lang$html$Html_Events$onClick(_ivanceras$svgbob$Main$Convert)
 							]),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -12016,33 +12088,28 @@ var _user$project$Main$view = function (model) {
 					]),
 				_elm_lang$core$Native_List.fromArray(
 					[
-						function () {
-						var _p1 = A2(_elm_lang$core$Debug$log, 'end svg', '');
-						var svg = _user$project$Diagram$getSvg(model.grid);
-						var _p2 = A2(_elm_lang$core$Debug$log, 'start svg', '');
-						return svg;
-					}()
+						_ivanceras$svgbob$Diagram$toSvg(model.input)
 					]))
 			]));
 };
-var _user$project$Main$Input = function (a) {
+var _ivanceras$svgbob$Main$Input = function (a) {
 	return {ctor: 'Input', _0: a};
 };
-var _user$project$Main$subscriptions = function (model) {
+var _ivanceras$svgbob$Main$subscriptions = function (model) {
 	return _elm_lang$core$Platform_Sub$batch(
 		_elm_lang$core$Native_List.fromArray(
 			[
-				_user$project$Main$receiveAsciiText(_user$project$Main$Input)
+				_ivanceras$svgbob$Main$receiveAsciiText(_ivanceras$svgbob$Main$Input)
 			]));
 };
-var _user$project$Main$main = {
+var _ivanceras$svgbob$Main$main = {
 	main: _elm_lang$html$Html_App$program(
-		{init: _user$project$Main$init, view: _user$project$Main$view, update: _user$project$Main$update, subscriptions: _user$project$Main$subscriptions})
+		{init: _ivanceras$svgbob$Main$init, view: _ivanceras$svgbob$Main$view, update: _ivanceras$svgbob$Main$update, subscriptions: _ivanceras$svgbob$Main$subscriptions})
 };
 
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
-_elm_lang$core$Native_Platform.addPublicModule(Elm['Main'], 'Main', typeof _user$project$Main$main === 'undefined' ? null : _user$project$Main$main);
+_elm_lang$core$Native_Platform.addPublicModule(Elm['Main'], 'Main', typeof _ivanceras$svgbob$Main$main === 'undefined' ? null : _ivanceras$svgbob$Main$main);
 
 if (typeof define === "function" && define['amd'])
 {
