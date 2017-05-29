@@ -1,5 +1,5 @@
 
-Important: This project has been [rewritten in rust](https://github.com/ivanceras/svgbobrus)
+# Important: This project has been [rewritten in rust](https://github.com/ivanceras/svgbobrus)
 
 ```
       .--..--..--..--..--..--.
